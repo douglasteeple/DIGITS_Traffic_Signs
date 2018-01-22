@@ -1,4 +1,4 @@
-# DIGITS Traffic Signs Udacity Term 2 Robotic Inference Project
+# Udacity Term 2 Robotic Inference Project
 
 ## Introduction: 
 
