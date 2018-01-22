@@ -44,8 +44,11 @@ In an effort to ensure that reports are original, and to help avoid violations o
 ## References
 
 [1] Sayanan Sivaraman and Mohan M. Trivedi, "A General Active Learning Framework for On-road Vehicle Recognition and Tracking," IEEE Transactions on Intelligent Transportation Systems, 2010.
+
 [2] Eshed Ohn-Bar and Mohan M. Trivedi, "Hand Gesture Recognition in Real-Time for Automotive Interfaces: A Multimodal Vision-based Approach and Evaluations," IEEE Transactions on Intelligent Transportation Systems, 2014. 
+
 [3] Andreas Møgelmose, Mohan M. Trivedi, and Thomas B. Moeslund, "Vision based Traffic Sign Detection and Analysis for Intelligent Driver Assistance Systems: Perspectives and Survey," IEEE Transactions on Intelligent Transportation Systems, 2012.
+
 [4] Morten Bornø Jensen, Mark Philip Philipsen, Andreas Møgelmose, Thomas B. Moeslund, and Mohan M. Trivedi, “Vision for Looking at Trafﬁc Lights: Issues, Survey".
 
 
