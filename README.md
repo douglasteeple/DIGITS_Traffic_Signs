@@ -40,3 +40,12 @@ Conclusion / Future Work: This section is intended to summarize your report. You
 Your report must be in PDF format. You may use any method to produce this format. If you are looking for a challenge, you can create your project report in LaTeX and then export the report to pdf. Here’s a sample LaTeX report. It’s a fun way to create well formatted documents!
 
 In an effort to ensure that reports are original, and to help avoid violations of our code of conduct and the potential for plagiarism, students are required to watermark all submissions; please make sure that all of your submitted work, including images, tables, charts, and graphs, contain watermarks with your first and last name when submitted. Please note, that your report is not shared publicly without your consent and you are not required to post your report publicly in your portfolio with your name displayed.
+
+## References
+
+[1] Sayanan Sivaraman and Mohan M. Trivedi, "A General Active Learning Framework for On-road Vehicle Recognition and Tracking," IEEE Transactions on Intelligent Transportation Systems, 2010.
+[2] Eshed Ohn-Bar and Mohan M. Trivedi, "Hand Gesture Recognition in Real-Time for Automotive Interfaces: A Multimodal Vision-based Approach and Evaluations," IEEE Transactions on Intelligent Transportation Systems, 2014. 
+[3] Andreas Møgelmose, Mohan M. Trivedi, and Thomas B. Moeslund, "Vision based Traffic Sign Detection and Analysis for Intelligent Driver Assistance Systems: Perspectives and Survey," IEEE Transactions on Intelligent Transportation Systems, 2012.
+[4] Morten Bornø Jensen, Mark Philip Philipsen, Andreas Møgelmose, Thomas B. Moeslund, and Mohan M. Trivedi, “Vision for Looking at Trafﬁc Lights: Issues, Survey".
+
+
