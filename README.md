@@ -1,7 +1,11 @@
-# DIGITS_Traffic_Signs
-Traffic sign recognition using DIGITS
+# DIGITS Traffic Signs Udacity Term 2 Robotic Inference Project
+
+
 
 ## Introduction: 
+
+Traffic sign classification using DIGITS.
+
 The introduction should provide some material regarding the history of the problem, why it is important and what is intended to be achieved. If there exists any previous attempts to solve this problem, this is a great place to note these while conveying the differences in your approach (if any). The intent is to provide enough information for the reader to understand why this problem is interesting and set up the conversation for the solution you have provided.
 
 Use this space to introduce your robotic inference idea and how you wish to apply it. If you have any papers / sites you have referenced for your idea, please make sure to cite them.
