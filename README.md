@@ -11,7 +11,11 @@ The introduction should provide some material regarding the history of the probl
 
 Use this space to introduce your robotic inference idea and how you wish to apply it. If you have any papers / sites you have referenced for your idea, please make sure to cite them.
 
-## Background / Formulation: 
+## Background / Formulation
+
+Once your data is imported, it is up to you to choose a training model. You can use a pre-supplied one, one from the DIGITS model store, an external network or even customize the above choices.
+
+Your model will have to achieve an inference time of 10 ms or less on the workspace and have an accuracy greater than 75 percent.
 
 At this stage, you should begin diving into the technical details of your approach by explaining to the reader how parameters were defined, what type of network was chosen, and the reasons these items were performed. This should be factual and authoritative, meaning you should not use language such as “I think this will work” or “Maybe a network with this architecture is better..”. Instead, focus on items similar to, ”A 3-layer network architecture was chosen with X, Y, and Z parameters”
 
