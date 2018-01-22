@@ -1,10 +1,11 @@
 # DIGITS Traffic Signs Udacity Term 2 Robotic Inference Project
 
-
-
 ## Introduction: 
 
-Traffic sign classification using DIGITS.
+This project consists of two parts:
+
+1. Classification training of the supplied P1 dataset.
+2. Creation of a Robotic Inference Idea. In this case a traffic sign classification idea was chosen.
 
 The introduction should provide some material regarding the history of the problem, why it is important and what is intended to be achieved. If there exists any previous attempts to solve this problem, this is a great place to note these while conveying the differences in your approach (if any). The intent is to provide enough information for the reader to understand why this problem is interesting and set up the conversation for the solution you have provided.
 
