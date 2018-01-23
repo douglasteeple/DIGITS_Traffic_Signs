@@ -288,11 +288,17 @@ The results are very encouraging, as the distinction between speedLimit25 and sp
 
 Traffic sign classification is a difficult task. Images are blurry, small in the field of view, sometime occluded, often rotated or taken at odd angles not straight on. All of these factors make the inference process very difficult. Motion of the vehicle at highway speeds requires that the inferencing be done very quickly in order to be relevant. All of these factors make this project a real challenge.
 
+The availability of large numbers of images for training and validation is a valuable asset. The LISA dataset has over 7,000 real world images.
+
 In the case of imaging taken from a moving vehicle, perhaps at high speed, both accuracy and inference speed are equally important. Clearly, the decision must be made quickly to be relevant and a mistake in classification could be fatal.
+
+A greater variety of traffic signs needs to be in the dataset and to be classified in order to be useful in the real world. There are perhaps in the order hundreds of different trffic signs. Any real world deploymnet would need to recognize this large number of classes.
 
 ## Conclusion / Future Work
 
-This section is intended to summarize your report. Your summary should include a recap of the results, did this project achieve what you attempted, and is this a commercially viable product? For future work, address areas of work that you may not have addressed in your report as possible next steps. This could be due to time constraints, lack of currently developed methods / technology, and areas of application outside of your current implementation. Again, avoid the use of the first-person.
+The project was a success achieving typically 99% accuracy in classification. Further work would be in creating a larger dataset with more kinds of traffic signs and extending the model to classify perhaps hudreds of different signs.
+
+One fascinating aspect of traffic signs is "dynamic" signs such as traffic lights.
 
 ## References
 
