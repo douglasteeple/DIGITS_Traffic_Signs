@@ -31,12 +31,12 @@ No parameters were changed from the DIGITS defaults.
 
 ## Data Acquisition
 
-The P1 dataset was provided by Udacity and no processing was required. THe training and validation datasets were created as 256x256 color images.
+The P1 dataset was provided by Udacity and no processing was required. THe training and validation datasets were created as 256x256 color images. Both grayscale and color images were tested, with the same model.
 
 
 ## Results
 
-The **evaluate** results are:
+The **evaluate** results for color images are:
 
 <img height="480" src="P1/GoogLeNet/P1ColorEvaluate.png"/>
 
@@ -54,15 +54,15 @@ Sample classified images:
 
 <img height="480" src="P1/GoogLeNet/TopNImageClassificationP1Color.png"/>
 
+Both grayscale and color images were tested. It was found that grayscale could only achieve about 72% accuracy, so color images were used.
+
 ## Discussion
 
-This is the only section of the report where you may include your opinion. However, make sure your opinion is based on facts. If your results are poor, make mention of what may be the underlying issues. If the results are good, why do you think this is the case? Again, avoid writing in the first person (i.e. Do not use words like “I” or “me”). If you really find yourself struggling to avoid the word “I” or “me”; sometimes, this can be avoided with the use of the word “one”. As an example: instead of, "I think the accuracy on my dataset is low because the images are too small to show the necessary detail" try, "one may believe the accuracy on the dataset is low because the images are too small to show the necessary detail". They say the same thing, but the second avoids the first person.
-
-Reflect on which is more important, inference time or accuracy, in regards to your robotic inference project.
+The GoogLeNet model performed well on 256x256 color imagaes, meeting the project requirements. In the case of a conveyor belt moving at the speed shown in the class, clearly the 5ms decision time is adequate for the sorting job. So in this case, accuracy is more important than inference speed, as long as it is kept less than perhaps 1/2 second.
 
 ## Conclusion / Future Work
 
-This section is intended to summarize your report. Your summary should include a recap of the results, did this project achieve what you attempted, and is this a commercially viable product? For future work, address areas of work that you may not have addressed in your report as possible next steps. This could be due to time constraints, lack of currently developed methods / technology, and areas of application outside of your current implementation. Again, avoid the use of the first-person.
+A trained model sorting into 3 classes clearly has the speed and accuracy to sort objects on a conveyor belt. Further work might extend the number of classes of objects into the realm of 10 or perhaps 100. Of course, the number of classes into which the images must be classified depends on the actual application as deployed in the real world.
 
 
 <hr>
