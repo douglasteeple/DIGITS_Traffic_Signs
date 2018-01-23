@@ -27,17 +27,20 @@ The model was built as shown:
 <img height="480" src="P1/GoogLeNet/P1ColorScreen-2.png"/>
 </p>
 
-Color 256x256 pixel images were used for training and validation. No further paramters were set from the DIGITS defaults.
+No parameters were changed from the DIGITS defaults.
 
 ## Data Acquisition
 
-The P1 dataset was provided by Udacity and no processing was required.
+The P1 dataset was provided by Udacity and no processing was required. THe training and validation datasets were created as 256x256 color images.
+
 
 ## Results
 
 The **evaluate** results are:
 
 <img height="480" src="P1/GoogLeNet/P1ColorEvaluate.png"/>
+
+The model clearly passes the project requirements of > 75% acccuracy and procesing time of less than 10ms.
 
 The training accuracy graph as given by the model is:
 
