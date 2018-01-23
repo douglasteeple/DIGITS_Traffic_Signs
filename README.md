@@ -298,7 +298,7 @@ A greater variety of traffic signs needs to be in the dataset and to be classifi
 
 The project was a success achieving typically 99% accuracy in classification. Further work would be in creating a larger dataset with more kinds of traffic signs and extending the model to classify perhaps hudreds of different signs.
 
-One fascinating aspect of traffic signs is "dynamic" signs such as traffic lights.
+One fascinating aspect of traffic signs is "dynamic" signs such as traffic lights. Grayscale images were used in this project because many automobiles are not equpipped with color cameras. This present a challenge for distinguishing whether a traffic signal is "Red" or "Green". Persons that are color blind have a similar problem when driving, being unable to see red vs green color in the lights. However, "Red" is always the top light and green the bottom, so the light color can be distinguished from brightness of the topmost vs the bottom most light. A model that specifically addresses traffic lights would be a fascinating follow on project.
 
 ## References
 
