@@ -223,7 +223,7 @@ While the raw images in the LISA dataset were used to create the training and va
     </tr>
     <tr>
         <td>
-            <a href="images/" target=_blank><img height="240" src="images/"/></a>
+            <a href="images/test/speedLimit25_test_001.png" target=_blank><img height="240" src="images/test/speedLimit25_test_001.png"/></a>
         </td>
         <td>
             <a href="images/" target=_blank><img height="240" src="images/"/></a>
@@ -234,10 +234,20 @@ While the raw images in the LISA dataset were used to create the training and va
     </tr>
     <tr>
         <td>
-            <a href="images/" target=_blank><img height="240" src="images/"/></a>
+            <a href="images/test/yield_test_001.png" target=_blank><img height="240" src="images/test/yield_test_001.png"/></a>
         </td>
         <td>
-            <a href="images/stop_test_001.png" target=_blank><img height="240" src="images/stop_test_001.png"/></a>
+            <a href="images/test/stop_test_001.png" target=_blank><img height="240" src="images/test/stop_test_001.png"/></a>
+        </td>
+    </tr>
+        <th colspan=2>Other</th>
+    </tr>
+    <tr>
+        <td>
+            <a href="images/test/pedestrianCrossing_test_001.png" target=_blank><img height="240" src="images/test/pedestrianCrossing_test_001.png"/></a>
+        </td>
+        <td>
+            <a href="images/test/stop_test_001.png" target=_blank><img height="240" src="images/test/stop_test_001.png"/></a>
         </td>
     </tr>
 </table>
