@@ -4,12 +4,18 @@
 
 This project consists of two parts:
 
-1. Classification training of the supplied P1 dataset of bottles and candy wrappers.
-2. Creation of a Robotic Inference Idea. In this case a traffic sign classification idea was chosen.
+1. Classification training of the supplied P1 dataset of bottles and candy wrappers - the "P1" dataset.
+2. Creation of a Robotic Inference Idea. In this case a traffic sign classification idea was chosen. These images are in the "TrafficeSigns" dataset.
 
-The introduction should provide some material regarding the history of the problem, why it is important and what is intended to be achieved. If there exists any previous attempts to solve this problem, this is a great place to note these while conveying the differences in your approach (if any). The intent is to provide enough information for the reader to understand why this problem is interesting and set up the conversation for the solution you have provided.
+### Part One
 
-Use this space to introduce your robotic inference idea and how you wish to apply it. If you have any papers / sites you have referenced for your idea, please make sure to cite them.
+This dataset represents images of bottles and candy wrappers on a conveyor belt passing under a camera. The idea is to sort the items into two bins by activating a swing arm that guides the products to the right bin. The applications of such a recognition system are many, including including for example classification sorting, or identifying defective products.
+
+### Part Two
+
+This idea was motivated by an interest in autonomous vehicle control. Many lives can be saved on the highways and roadways if the vehicle can monitor unsafe situations and assist in controlling the vehicle. The idea is to recognize traffic signs such as stop, yeild and speed limit signs. Should the driver ignore or not see a stop or yield sign, the autonomous control can take over to ensure vehicle safety. In the case that spped limits are being violated, the vehicle can modify the vehicle speed or advise the driver to do so.
+
+The idea is to create a model classifying traffice signs, download it to a processor such as a Jetson TX2 or perhaps even an iPhone and have it monitor and advise live driving.
 
 ## Background / Formulation
 
@@ -23,7 +29,7 @@ Explain why you chose the network you did for the supplied data set and then why
 
 ## Data Acquisition: 
 
-The LISA dataset contains over 7,000 traffic sign images. These are examples of raw images of the 4 classes of signs chosen:
+The LISA dataset contains over 7,000 traffic sign images. This dataset was chosen for the reality of the images (many signs are small, occluded, blurry, etc) and its sheer size. These are examples of raw images of the 4 classes of signs chosen:
 
 <center>
 <table>
@@ -55,7 +61,8 @@ The LISA dataset contains over 7,000 traffic sign images. These are examples of 
 </table>
 </center>
 
-The images are processed by a bash script (<a href="doit.sh">doit.sh</a>) that I wrote that calls Python tools included with the LISA distribution. The script creates a single CSV index file that references the images in all of the subdirectories of the LISA distribution and crops the actual sign into image sets for training and validation that is uploaded to the DIGITS directory. The CSV file contains fields that reference the source image and coordinates of the sign:
+The images are processed by a bash script (<a href="doit.sh">doit.sh</a>) that I wrote that calls Python tools included with the LISA distribution. The script creates a single CSV index file that references the images in all of the subdirectories of the LISA distribution and crops the actual sign into image sets for training and validation that is uploaded to the DIGITS directory. The CSV file contains useful fields that reference the source image, tag and coordinates of the sign:
+
 ```
 Filename;Annotation tag;Upper left corner X;Upper left corner Y;Lower right corner X;Lower right corner Y;Occluded,On another road;Origin file;Origin frame number;Origin track;Origin track frame number
 ```
