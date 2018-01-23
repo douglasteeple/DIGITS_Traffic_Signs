@@ -242,6 +242,28 @@ While the raw images in the LISA dataset were used to create the training and va
 
 ## Results
 
+The TrafficSigns dataset was created as follows:
+
+<img height="480" src="TrafficSignsClassification/AlexNet/TrafficSignsDataSet-1.png"/>
+<img height="480" src="TrafficSignsClassification/AlexNet/TrafficSignsDataSet-2.png"/>
+
+THe only difference between LeNet vs GoogLeNet / AlexNet datasets was that the former images size was stretched to 32x32 and the latter 256x256 pixels.
+
+The results for AlexNet and GoogLeNet as shown below were poor. AlexNet achieved only 80% accuracy:
+
+<img height="480" src="TrafficSignsClassification/AlexNet/TrafficSignsAlexNet-1.png"/>
+
+GoogLeNet acheived about 90% accuracy:
+
+<img height="480" src="TrafficSignsClassification/GoogLeNet/TrafficSignsGoogLeNet-1.png"/>
+
+These models will not be discussed further. 
+
+LeNet gave excellent results and will be dicussed in more detail. LeNet gave an accuracy of almost 100%:
+
+<img height="480" src="TrafficSignsClassification/GoogLeNet/TrafficSignsLeNetLargegraph.png"/>
+
+
 This is typically the hardest part of the report for many. You want to convey your results in an unbiased fashion. If your results are good, you can objectively note this. Similarly, you may do this if they are bad as well. You do not want to justify your results here with discussion; this is a topic for the next session. Present the results of your robotics project model and the model you used for the supplied data with the appropriate accuracy and inference time.
 
 For demonstrating your results, it is incredibly useful to have some charts, tables, and/or graphs for the reader to review. This makes ingesting the information quicker and easier.
