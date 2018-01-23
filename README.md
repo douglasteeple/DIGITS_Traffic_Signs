@@ -56,9 +56,9 @@ The LISA dataset contains over 7,000 traffic sign images. These are examples of 
 </center>
 
 The images are processed by a bash script (<a href="doit.sh">doit.sh</a>) that I wrote that calls Python tools included with the LISA distribution. The script creates a single CSV index file that references the images in all of the subdirectories of the LISA distribution and crops the actual sign into image sets for training and validation that is uploaded to the DIGITS directory. The CSV file contains fields that reference the source image and coordinates of the sign:
-'''
+```
 Filename;Annotation tag;Upper left corner X;Upper left corner Y;Lower right corner X;Lower right corner Y;Occluded,On another road;Origin file;Origin frame number;Origin track;Origin track frame number
-'''
+```
 
 The processed images contain just the signs:
 
@@ -91,6 +91,10 @@ The processed images contain just the signs:
     </tr>
 </table>
 </center>
+
+The raw and processed images are mixture of grayscale and color images. The DIGITS DataSet creation process converts all the images to grayscale. The processed images are crop to a size of 32x32 pixels.
+
+While the raw images in the LISA dataset were used to create the training and validation set, the test dataset was taken independently using an iPhone.
 
 This section should discuss the data set. Items to include are the number of images, size of the images, the types of images (RGB, Grayscale, etc.), how these images were collected (including the method). Providing this information is critical if anyone would like to replicate your results. After all, the intent of reports such as these is to convey information and build upon ideas so you want to ensure others can validate your process.
 
