@@ -72,6 +72,10 @@ This idea was motivated by an interest in autonomous vehicle control. Many lives
 
 The deployment idea is to create a model classifying traffic signs, download it to a processor such as a Jetson TX2 or perhaps even an iPhone and have it monitor and advise live driving.
 
+Three classification models were created using standard DIGITS models: AlexNet, GoogLeNet and LeNet. Classification models were chosen as most suitable the the project idea: classifiy traffic signs into known categories.
+
+The sign images were converted to 256x256 pixels for AlexNet and GoogLeNet, and converted to 32x32 pixels for LeNet. All images were converted to grayscale.
+
 ## Data Acquisition
 
 The LISA dataset contains over 7,000 traffic sign images. This dataset was chosen for the reality of the images (many signs are small, occluded, blurry, etc) and its sheer volume fo images. While the rubric for the project specifies at least 3 classes of images, 4 classes were chosen. The classes are **stop**, **yield**, **speedLimit25** and **speedLimit35**. The first two classes were chosen due to their imoprtance for vehicle safety. The second two were chosen to set a challenge level of difficuly in distinguishing 25 from 35.
@@ -108,15 +112,17 @@ These are examples of raw images of the 4 classes of signs chosen:
 </table>
 </div>
 
-The images are processed by a bash script (<a href="doit.sh">doit.sh</a>) that I wrote that calls Python tools included with the LISA distribution. The script creates a single CSV index file that references the images in all of the subdirectories of the LISA distribution and crops the actual sign into image sets for training and validation that is uploaded to the DIGITS directory. The CSV file contains useful fields that reference the source image, tag and coordinates of the sign:
+The images are processed by a bash script (<a href="doit.sh">doit.sh</a>) that I wrote that calls Python tools included with the LISA distribution. The script first merges individual subdirectory CSV annotation files into a single CSV (Comma Separated Values) index file that references the images in all of the subdirectories of the LISA distribution. It then splits the merged file into 80% training and 20% validation image sets. It then crops the actual sign faces into small (about 32x32 pixel) image sets for training and validation that is uploaded to the DIGITS directory. 
+
+The LISA CSV annotation file contains useful fields that reference the source image, tag and coordinates of the sign:
 
 ```
 Filename;Annotation tag;Upper left corner X;Upper left corner Y;Lower right corner X;Lower right corner Y;Occluded,On another road;Origin file;Origin frame number;Origin track;Origin track frame number
 ```
 
-Only the file name, the annotation tag and the sign image coordinates are used in the test and validation datasets.
+Only the file name, the annotation tag and the sign image coordinates are used to create the test and validation datasets.
 
-The processed images are cropped from the raw data to contain just the signs:
+The processed images are cropped from the raw data to contain just the sign faces:
 
 <div style="text-align:center">
 <table>
@@ -148,7 +154,7 @@ The processed images are cropped from the raw data to contain just the signs:
 </table>
 </div>
 
-The raw and processed images are mixture of grayscale and color images. The DIGITS DataSet creation process converts all the images to grayscale. The processed images are cropped to a size of 32x32 pixels.
+The raw and processed images are mixture of grayscale and color images. The DIGITS DataSet creation process converts all the images to grayscale. The processed images are cropped to a comomn size of 32x32 pixels in DIGITS.
 
 The count of **training** images for each class are:
 
