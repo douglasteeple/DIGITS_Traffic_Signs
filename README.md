@@ -32,6 +32,8 @@ The LISA dataset contains over 7,000 traffic sign images. This is an example of 
     </tr>
     <tr>
         <th>Speed Limit 25</th><th>Speed Limit 35</th>
+    </tr>
+    <tr>
         <td>
             <a href="images/speedLimit25_1333394492.avi_image2.png" target=_blank><img height="240" src="images/speedLimit25_1333394492.avi_image2.png"/></a>
         </td>
@@ -41,6 +43,8 @@ The LISA dataset contains over 7,000 traffic sign images. This is an example of 
     </tr>
     <tr>
         <th>Yield</th><th>Stop</th>
+    </tr>
+    <tr>
         <td>
             <a href="images/syield_1333395823.avi_image7.png" target=_blank><img height="240" src="images/yield_1333395823.avi_image7.png"/></a>
         </td>
