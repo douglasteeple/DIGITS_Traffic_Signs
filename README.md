@@ -21,7 +21,15 @@ The deployment idea is to create a model classifying traffic signs, download it 
 
 ### Part One "P1"
 
-The P1 dataset was created from the /data/P1/ directory using DIGITS. The images were chosen to be 256x256 color images. The model was chosen as a classification model as it most closely fits the requirements of the project. Two classification models were tested - AlexNet and GoogLeNet. AlexNet did not perform to the rubric requirements and will not be further discussed here. GoogLeNet did achieve the project goals of inference in less than 10ms and greater than 75% accuracy. The **evaluate** results are:
+The P1 dataset was created from the /data/P1/ directory using DIGITS. The images were chosen to be 256x256 color images. The model was chosen as a classification model as it most closely fits the requirements of the project. Two classification models were tested - AlexNet and GoogLeNet. AlexNet did not perform to the rubric requirements and will not be further discussed here. GoogLeNet did achieve the project goals of inference in less than 10ms and greater than 75% accuracy. 
+
+The model was built as shown:
+
+<img height="480" src="P1/GoogLeNet/P1ColorScreen.png"/>
+
+Color 256x256 pixel images were used for training and validation. No further paramters were set from the DIGITS defaults.
+
+The **evaluate** results are:
 
 <img height="480" src="P1/GoogLeNet/P1ColorEvaluate.png"/>
 
