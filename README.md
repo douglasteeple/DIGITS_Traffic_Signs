@@ -31,7 +31,7 @@ Explain why you chose the network you did for the supplied data set and then why
 
 The LISA dataset contains over 7,000 traffic sign images. This dataset was chosen for the reality of the images (many signs are small, occluded, blurry, etc) and its sheer size. These are examples of raw images of the 4 classes of signs chosen:
 
-<center>
+<div align="center">
 <table>
     <tr>
         <th colspan=2>Raw Traffic Sign Images</th>
@@ -59,7 +59,7 @@ The LISA dataset contains over 7,000 traffic sign images. This dataset was chose
         </td>
     </tr>
 </table>
-</center>
+</div>
 
 The images are processed by a bash script (<a href="doit.sh">doit.sh</a>) that I wrote that calls Python tools included with the LISA distribution. The script creates a single CSV index file that references the images in all of the subdirectories of the LISA distribution and crops the actual sign into image sets for training and validation that is uploaded to the DIGITS directory. The CSV file contains useful fields that reference the source image, tag and coordinates of the sign:
 
