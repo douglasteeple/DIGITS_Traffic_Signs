@@ -18,9 +18,10 @@ The P1 dataset consists of images of bottles and candy wrappers on a conveyor be
 The P1 dataset was created from the /data/P1/ directory using DIGITS. The images were chosen to be 256x256 color images. The model was chosen as a classification model as it most closely fits the requirements of the project. Two classification models were tested - AlexNet and GoogLeNet. AlexNet did not perform to the rubric requirements and will not be further discussed here. GoogLeNet did achieve the project goals of inference in less than 10ms and greater than 75% accuracy.
 
 The model was built as shown:
-
+<p style="text-align:center">
 <img height="480" src="P1/GoogLeNet/P1ColorScreen-1.png"/>
 <img height="480" src="P1/GoogLeNet/P1ColorScreen-2.png"/>
+</p>
 
 Color 256x256 pixel images were used for training and validation. No further paramters were set from the DIGITS defaults.
 
@@ -81,7 +82,7 @@ The LISA dataset contains over 7,000 traffic sign images. This dataset was chose
 
 These are examples of raw images of the 4 classes of signs chosen:
 
-<div align="center">
+<div style="text-align:center">
 <table>
     <tr>
         <th colspan=2>Raw Traffic Sign Images</th>
@@ -121,7 +122,7 @@ Only the file name, the annotation tag and the sign image coordinates are used i
 
 The processed images are cropped from the raw data to contain just the signs:
 
-<p "text-align=center">
+<p style="text-align:center">
 <table>
     <tr>
         <th colspan=2>Processed Traffic Sign Images</th>
@@ -155,7 +156,7 @@ The raw and processed images are mixture of grayscale and color images. The DIGI
 
 The count of **training** images for each class are:
 
-<p "text-align=center">
+<p style="text-align:center">
 <table>
     <tr>
         <th colspan=2>Training Traffic Sign Image Counts</th>
@@ -180,7 +181,7 @@ The count of **training** images for each class are:
 
 The count of **validation** images for each class are:
 
-<p "text-align=center">
+<p style="text-align:center">
 <table>
     <tr>
         <th colspan=2>Validation Traffic Sign Image Counts</th>
@@ -206,7 +207,7 @@ The split in number of training / validation images was set at 80% / 20% in the 
 
 While the raw images in the LISA dataset were used to create the training and validation set, the test dataset was taken independently using an iPhone.
 
-<div align="center">
+<div style="text-align:center">
 <table>
     <tr>
         <th colspan=2>Test Traffic Sign Images</th>
