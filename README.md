@@ -1,3 +1,5 @@
+# Udacity Term 2 Robotic Inference Project
+
 <head>
     <style>
         h1 {text-align:center;}
@@ -5,7 +7,6 @@
     </style>
 </head>
 
-# Udacity Term 2 Robotic Inference Project
 
 ## Introduction: 
 
