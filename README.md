@@ -247,7 +247,7 @@ While the raw images in the LISA dataset were used to create the training and va
             <a href="images/test/pedestrianCrossing_test_001.png" target=_blank><img height="240" src="images/test/pedestrianCrossing_test_001.png"/></a>
         </td>
         <td>
-            <a href="images/test/stop_test_001.png" target=_blank><img height="240" src="images/test/stop_test_001.png"/></a>
+            <a href="images/test/yieldAhead_test_001.png" target=_blank><img height="240" src="images/test/yieldAhead_test_001.png"/></a>
         </td>
     </tr>
 </table>
