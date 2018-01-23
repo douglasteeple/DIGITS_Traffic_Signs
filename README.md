@@ -1,15 +1,19 @@
 # Udacity Term 2 Robotic Inference Project
 
+<hr>
+
 ## Introduction
 
 This project consists of two parts:
 
 1. Classification training of the supplied P1 dataset of bottles and candy wrappers - the "P1" dataset.
-2. Creation of a Robotic Inference Idea. In this case a traffic sign classification idea was chosen. These images are in the "TrafficeSigns" dataset.
+2. Creation of a Robotic Inference Idea. In this case a traffic sign classification idea was chosen. These images are in the "TrafficSigns" dataset.
 
 <hr>
 
 ## Part One "P1"
+
+<hr>
 
 ### Background / Formulation
 
@@ -27,11 +31,13 @@ The model was built as shown:
 
 Color 256x256 pixel images were used for training and validation. No further paramters were set from the DIGITS defaults.
 
+<hr>
 
 ### Data Acquisition
 
 The P1 dataset was provided by Udacity and no processing was required.
 
+<hr>
 
 ### Results
 
@@ -51,12 +57,15 @@ Sample classified images:
 
 <img height="480" src="P1/GoogLeNet/TopNImageClassificationP1Color.png"/>
 
+<hr>
 
 ### Discussion
 
 This is the only section of the report where you may include your opinion. However, make sure your opinion is based on facts. If your results are poor, make mention of what may be the underlying issues. If the results are good, why do you think this is the case? Again, avoid writing in the first person (i.e. Do not use words like “I” or “me”). If you really find yourself struggling to avoid the word “I” or “me”; sometimes, this can be avoided with the use of the word “one”. As an example: instead of, "I think the accuracy on my dataset is low because the images are too small to show the necessary detail" try, "one may believe the accuracy on the dataset is low because the images are too small to show the necessary detail". They say the same thing, but the second avoids the first person.
 
 Reflect on which is more important, inference time or accuracy, in regards to your robotic inference project.
+
+<hr>
 
 ### Conclusion / Future Work
 
@@ -71,12 +80,15 @@ This section is intended to summarize your report. Your summary should include a
 
 ## Part Two "Traffic Signs"
 
+<hr>
+
 ### Background / Formulation
 
 This idea was motivated by an interest in autonomous vehicle control. Many lives can be saved on the highways and roadways if the vehicle can monitor unsafe situations and assist in controlling the vehicle. The idea is to recognize traffic signs such as stop, yeild and speed limit signs. Should the driver ignore or not see a stop or yield sign, the autonomous control can take over to ensure vehicle safety. In the case that spped limits are being violated, the vehicle can modify the vehicle speed or advise the driver to do so.
 
 The deployment idea is to create a model classifying traffic signs, download it to a processor such as a Jetson TX2 or perhaps even an iPhone and have it monitor and advise live driving.
 
+<hr>
 
 ### Data Acquisition
 
@@ -240,17 +252,23 @@ While the raw images in the LISA dataset were used to create the training and va
 </table>
 </div>
 
+<hr>
+
 ### Results
 
 This is typically the hardest part of the report for many. You want to convey your results in an unbiased fashion. If your results are good, you can objectively note this. Similarly, you may do this if they are bad as well. You do not want to justify your results here with discussion; this is a topic for the next session. Present the results of your robotics project model and the model you used for the supplied data with the appropriate accuracy and inference time.
 
 For demonstrating your results, it is incredibly useful to have some charts, tables, and/or graphs for the reader to review. This makes ingesting the information quicker and easier.
 
+<hr>
+
 ### Discussion
 
 This is the only section of the report where you may include your opinion. However, make sure your opinion is based on facts. If your results are poor, make mention of what may be the underlying issues. If the results are good, why do you think this is the case? Again, avoid writing in the first person (i.e. Do not use words like “I” or “me”). If you really find yourself struggling to avoid the word “I” or “me”; sometimes, this can be avoided with the use of the word “one”. As an example: instead of, "I think the accuracy on my dataset is low because the images are too small to show the necessary detail" try, "one may believe the accuracy on the dataset is low because the images are too small to show the necessary detail". They say the same thing, but the second avoids the first person.
 
 Reflect on which is more important, inference time or accuracy, in regards to your robotic inference project.
+
+<hr>
 
 ### Conclusion / Future Work
 
@@ -259,6 +277,7 @@ This section is intended to summarize your report. Your summary should include a
 Your report must be in PDF format. You may use any method to produce this format. If you are looking for a challenge, you can create your project report in LaTeX and then export the report to pdf. Here’s a sample LaTeX report. It’s a fun way to create well formatted documents!
 
 
+<hr>
 
 ## References
 
