@@ -20,6 +20,8 @@ The P1 dataset was created from the /data/P1/ directory using DIGITS. The images
 The model was built as shown:
 <p style="text-align:center">
 <img height="480" src="P1/GoogLeNet/P1ColorScreen-1.png"/>
+</p>
+<p style="text-align:center">
 <img height="480" src="P1/GoogLeNet/P1ColorScreen-2.png"/>
 </p>
 
@@ -122,7 +124,7 @@ Only the file name, the annotation tag and the sign image coordinates are used i
 
 The processed images are cropped from the raw data to contain just the signs:
 
-<p style="text-align:center">
+<div style="text-align:center">
 <table>
     <tr>
         <th colspan=2>Processed Traffic Sign Images</th>
@@ -150,13 +152,13 @@ The processed images are cropped from the raw data to contain just the signs:
         </td>
     </tr>
 </table>
-</p>
+</div>
 
 The raw and processed images are mixture of grayscale and color images. The DIGITS DataSet creation process converts all the images to grayscale. The processed images are cropped to a size of 32x32 pixels.
 
 The count of **training** images for each class are:
 
-<p style="text-align:center">
+<div style="text-align:center">
 <table>
     <tr>
         <th colspan=2>Training Traffic Sign Image Counts</th>
@@ -177,11 +179,11 @@ The count of **training** images for each class are:
         <td>speedLimit35</td><td>404</td>
     </tr>
 </table>
-</p>
+</div>
 
 The count of **validation** images for each class are:
 
-<p style="text-align:center">
+<div style="text-align:center">
 <table>
     <tr>
         <th colspan=2>Validation Traffic Sign Image Counts</th>
@@ -202,6 +204,7 @@ The count of **validation** images for each class are:
         <td>speedLimit35</td><td>114</td>
     </tr>
 </table>
+</div>
 
 The split in number of training / validation images was set at 80% / 20% in the doit.sh bash script.
 
