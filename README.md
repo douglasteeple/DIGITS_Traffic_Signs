@@ -1,3 +1,10 @@
+<head>
+    <style>
+        h1 {text-align:center;}
+        p {text-align:center;}
+    </style>
+</head>
+
 # Udacity Term 2 Robotic Inference Project
 
 ## Introduction: 
@@ -71,7 +78,7 @@ Only the file name, the annotation tag and the sign image coordinates are used i
 
 The processed images are cropped from the raw data to contain just the signs:
 
-<div align="center">
+<p>
 <table>
     <tr>
         <th colspan=2>Processed Traffic Sign Images</th>
@@ -99,7 +106,7 @@ The processed images are cropped from the raw data to contain just the signs:
         </td>
     </tr>
 </table>
-</div>
+</p>
 
 The raw and processed images are mixture of grayscale and color images. The DIGITS DataSet creation process converts all the images to grayscale. The processed images are cropped to a size of 32x32 pixels.
 
