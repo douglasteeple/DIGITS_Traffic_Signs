@@ -260,8 +260,7 @@ While the raw images in the LISA dataset were used to create the training and va
 
 The TrafficSigns dataset was created as follows:
 
-<img height="480" src="TrafficSignsClassification/AlexNet/TrafficSignsDataSet-1.png" style="margin:0px auto;display:block"/>
-<img height="480" src="TrafficSignsClassification/AlexNet/TrafficSignsDataSet-2.png" style="margin:0px auto;display:block"/>
+<img height="480" src="TrafficSignsClassification/AlexNet/TrafficSignsDataSet.png" style="margin:0px auto;display:block"/>
 
 THe only difference between LeNet vs GoogLeNet / AlexNet datasets was that the former images size was stretched to 32x32 and the latter 256x256 pixels. In all models the number of epochs parameter was set to 5.
 
