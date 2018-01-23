@@ -23,7 +23,7 @@ Explain why you chose the network you did for the supplied data set and then why
 
 ## Data Acquisition: 
 
-The LISA dataset contains over 7,000 traffic sign images. This is an example of raw images of the 4 classes of signs chosen:
+The LISA dataset contains over 7,000 traffic sign images. These are examples of raw images of the 4 classes of signs chosen:
 
 <center>
 <table>
@@ -50,6 +50,43 @@ The LISA dataset contains over 7,000 traffic sign images. This is an example of 
         </td>
         <td>
             <a href="images/stop_1333388384.avi_image0.png" target=_blank><img height="240" src="images/stop_1333388384.avi_image0.png"/></a>
+        </td>
+    </tr>
+</table>
+</center>
+
+The images are processed by a bash script (<a href="doit.sh">doit.sh</a>) that I wrote that calls Python tools included with the LISA distribution. The script creates a single CSV index file that references the images in all of the subdirectories of the LISA distribution and crops the actual sign into image sets for training and validation that is uploaded to the DIGITS directory. The CSV file contains fields that reference the source image and coordinates of the sign:
+'''
+Filename;Annotation tag;Upper left corner X;Upper left corner Y;Lower right corner X;Lower right corner Y;Occluded,On another road;Origin file;Origin frame number;Origin track;Origin track frame number
+'''
+
+The processed images contain just the signs:
+
+<center>
+<table>
+    <tr>
+        <th colspan=2>Raw Traffic Sign Images</th>
+    </tr>
+    <tr>
+        <th>Speed Limit 25</th><th>Speed Limit 35</th>
+    </tr>
+    <tr>
+        <td>
+            <a href="images/276_speedLimit_1324866665.avi_image0.png" target=_blank><img height="240" src="images/276_speedLimit_1324866665.avi_image0.png"/></a>
+        </td>
+        <td>
+            <a href="images/416_speedLimit_1324866807.avi_image0.png" target=_blank><img height="240" src="images/416_speedLimit_1324866807.avi_image0.png"/></a>
+        </td>
+    </tr>
+    <tr>
+        <th>Yield</th><th>Stop</th>
+    </tr>
+    <tr>
+        <td>
+            <a href="images/176_yield_1323816786.avi_image19.png" target=_blank><img height="240" src="images/176_yield_1323816786.avi_image19.png"/></a>
+        </td>
+        <td>
+            <a href="images/1410_stop_1324866481.avi_image15.png" target=_blank><img height="240" src="images/1410_stop_1324866481.avi_image15.png"/></a>
         </td>
     </tr>
 </table>
