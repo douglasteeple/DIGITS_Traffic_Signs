@@ -1,0 +1,12 @@
+Tensorflow support disabled.
+2018-01-22 19:44:58 [DEBUG] 2147 total lines in file
+2018-01-22 19:44:58 [INFO ] 2147 valid lines in file
+2018-01-22 19:44:58 [DEBUG] Category 0 has 245 images.
+2018-01-22 19:44:58 [DEBUG] Category 1 has 404 images.
+2018-01-22 19:44:58 [DEBUG] Category 2 has 1413 images.
+2018-01-22 19:44:58 [DEBUG] Category 3 has 85 images.
+2018-01-22 19:45:00 [DEBUG] 2147 images loaded
+2018-01-22 19:45:00 [INFO ] 2147 images written to database
+2018-01-22 19:45:00 [INFO ] Mean saved at "/opt/DIGITS/digits/jobs/20180122-194455-8037/mean.binaryproto"
+2018-01-22 19:45:00 [INFO ] Mean saved at "/opt/DIGITS/digits/jobs/20180122-194455-8037/mean.jpg"
+2018-01-22 19:45:00 [INFO ] Database created after 1 seconds.
