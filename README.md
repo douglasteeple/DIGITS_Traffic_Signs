@@ -7,6 +7,8 @@ This project consists of two parts:
 1. Classification training of the supplied P1 dataset of bottles and candy wrappers - the "P1" dataset.
 2. Creation of a Robotic Inference Idea. In this case a traffic sign classification idea was chosen. These images are in the "TrafficeSigns" dataset.
 
+<hr>
+
 ## Part One "P1"
 
 ### Background / Formulation
@@ -62,7 +64,7 @@ This section is intended to summarize your report. Your summary should include a
 
 
 
-
+<hr>
 
 ## Part Two "Traffic Signs"
 
