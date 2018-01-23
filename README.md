@@ -27,7 +27,7 @@ The model was built as shown:
 <img height="480" src="P1/GoogLeNet/P1ColorScreen-2.png"/>
 </p>
 
-No parameters were changed from the DIGITS defaults.
+THe only parameter changed from the DIGITS defaults was the epochs which were set to 5.
 
 ## Data Acquisition
 
@@ -260,7 +260,7 @@ The TrafficSigns dataset was created as follows:
 <img height="480" src="TrafficSignsClassification/AlexNet/TrafficSignsDataSet-1.png"/>
 <img height="480" src="TrafficSignsClassification/AlexNet/TrafficSignsDataSet-2.png"/>
 
-THe only difference between LeNet vs GoogLeNet / AlexNet datasets was that the former images size was stretched to 32x32 and the latter 256x256 pixels.
+THe only difference between LeNet vs GoogLeNet / AlexNet datasets was that the former images size was stretched to 32x32 and the latter 256x256 pixels. In all models the number of epochs parameter was set to 5.
 
 The results for AlexNet and GoogLeNet as shown below were poor. AlexNet achieved only 80% accuracy:
 
