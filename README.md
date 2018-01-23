@@ -103,23 +103,23 @@ The processed images are cropped from the raw data to contain just the signs:
 
 The raw and processed images are mixture of grayscale and color images. The DIGITS DataSet creation process converts all the images to grayscale. The processed images are cropped to a size of 32x32 pixels.
 
-The count of training images for each class are:
+The count of **training** images for each class are:
 
 | Tag           | Count  |
-|: ------------- |-----:|
-| stop           | $1600 |
-| yield          |   $12 |
-| SpeedLimit 25  |    $1 |
-| SpeedLimit 35  |    $1 |
+|: ------------- |------:|
+| stop           | 1413  |
+| yield          |   85  |
+| SpeedLimit 25  |  245  |
+| SpeedLimit 35  |  404  |
 
-The count of validation images for each class are:
+The count of **validation** images for each class are:
 
-| Tag           | Count  |
-|: ------------- |-----:|
-| stop           | $1600 |
-| yield          |   $12 |
-| SpeedLimit 25  |    $1 |
-| SpeedLimit 35  |    $1 |
+| Tag            | Count  |
+|: ------------- |-------:|
+| stop           | 381    |
+| yield          |  18    |
+| SpeedLimit 25  |  63    |
+| SpeedLimit 35  |  114   |
 
 While the raw images in the LISA dataset were used to create the training and validation set, the test dataset was taken independently using an iPhone.
 
