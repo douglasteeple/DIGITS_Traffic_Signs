@@ -23,6 +23,32 @@ Explain why you chose the network you did for the supplied data set and then why
 
 ## Data Acquisition: 
 
+The LISA dataset contains over 7,000 traffic sign images. This is an example of raw images of the 4 classes of signs chosen:
+
+<center>
+<table>
+    <tr>
+        <th colspan=2>Raw Traffic Sign Images</th>
+    </tr>
+    <tr>
+        <td>
+            <a href="images/speedLimit25_1333394492.avi_image2.png" target=_blank><img height="240" src="images/speedLimit25_1333394492.avi_image2.png"/></a>
+        </td>
+        <td>
+            <a href="images/speedLimit35_1333393073.avi_image7.png" target=_blank><img height="240" src="images/speedLimit35_1333393073.avi_image7.png"/></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="images/syield_1333395823.avi_image7.png" target=_blank><img height="240" src="images/yield_1333395823.avi_image7.png"/></a>
+        </td>
+        <td>
+            <a href="images/top_1333388384.avi_image0.png" target=_blank><img height="240" src="itop_1333388384.avi_image0.png"/></a>
+        </td>
+    </tr>
+</table>
+</center>
+
 This section should discuss the data set. Items to include are the number of images, size of the images, the types of images (RGB, Grayscale, etc.), how these images were collected (including the method). Providing this information is critical if anyone would like to replicate your results. After all, the intent of reports such as these is to convey information and build upon ideas so you want to ensure others can validate your process.
 
 Justifying why you gathered data in this way is a helpful point, but sometimes this may be omitted here if the problem has been stated clearly in the introduction. It is a great idea here to have at least one or two images showing what your data looks like for the reader to visualize.
