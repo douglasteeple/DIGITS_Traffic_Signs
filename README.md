@@ -105,6 +105,7 @@ The raw and processed images are mixture of grayscale and color images. The DIGI
 
 The count of **training** images for each class are:
 
+
 | Tag           | Count  |
 |: ------------- |------:|
 | stop           | 1413  |
@@ -112,7 +113,9 @@ The count of **training** images for each class are:
 | SpeedLimit 25  |  245  |
 | SpeedLimit 35  |  404  |
 
+
 The count of **validation** images for each class are:
+
 
 | Tag            | Count  |
 |: ------------- |-------:|
@@ -120,6 +123,7 @@ The count of **validation** images for each class are:
 | yield          |  18    |
 | SpeedLimit 25  |  63    |
 | SpeedLimit 35  |  114   |
+
 
 While the raw images in the LISA dataset were used to create the training and validation set, the test dataset was taken independently using an iPhone.
 
