@@ -261,12 +261,25 @@ These models will not be discussed further.
 
 LeNet gave excellent results and will be dicussed in more detail. LeNet gave an accuracy of almost 100%:
 
-<img height="480" src="TrafficSignsClassification/GoogLeNet/TrafficSignsLeNetLargegraph.png"/>
+<img height="480" src="TrafficSignsClassification/LeNet/TrafficSignsLeNetLargegraph.png"/>
 
+This image shows a portion of the training dataset:
 
-This is typically the hardest part of the report for many. You want to convey your results in an unbiased fashion. If your results are good, you can objectively note this. Similarly, you may do this if they are bad as well. You do not want to justify your results here with discussion; this is a topic for the next session. Present the results of your robotics project model and the model you used for the supplied data with the appropriate accuracy and inference time.
+<img height="480" src="TrafficSignsClassification/LeNet/TrafficSignsTrainExplorer.png"/>
 
-For demonstrating your results, it is incredibly useful to have some charts, tables, and/or graphs for the reader to review. This makes ingesting the information quicker and easier.
+This image shows a portion of the validation dataset:
+
+<img height="480" src="TrafficSignsClassification/LeNet/TrafficSignsValidateExplorer.png"/>
+
+The LeNet model was used with no modifications in DIGITS:
+
+<img height="480" src="TrafficSignsClassification/LeNet/LeNetDiagram.png"/>
+
+This image shows sample classification results:
+
+<img height="480" src="TrafficSignsClassification/LeNet/ClassifyManyImages.png"/>
+
+The results are very encouraging, as the distinction between speedLimit25 and speedLimit35 is clearly being made with high accuracy, typically over 99%.
 
 ## Discussion
 
