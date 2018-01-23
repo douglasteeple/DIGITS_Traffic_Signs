@@ -60,7 +60,9 @@ The images are processed by a bash script (<a href="doit.sh">doit.sh</a>) that I
 Filename;Annotation tag;Upper left corner X;Upper left corner Y;Lower right corner X;Lower right corner Y;Occluded,On another road;Origin file;Origin frame number;Origin track;Origin track frame number
 ```
 
-The processed images contain just the signs:
+Only the file name, the annotation tag and the sign image coordinates are used in the test and validation datasets.
+
+The processed images are cropped from the raw data to contain just the signs:
 
 <center>
 <table>
