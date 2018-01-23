@@ -25,7 +25,8 @@ The P1 dataset was created from the /data/P1/ directory using DIGITS. The images
 
 The model was built as shown:
 
-<img height="480" src="P1/GoogLeNet/P1ColorScreen.png"/>
+<img height="480" src="P1/GoogLeNet/P1ColorScreen-1.png"/>
+<img height="480" src="P1/GoogLeNet/P1ColorScreen-2.png"/>
 
 Color 256x256 pixel images were used for training and validation. No further paramters were set from the DIGITS defaults.
 
@@ -36,6 +37,11 @@ The **evaluate** results are:
 The training accuracy graph as given by the model is:
 
 <img height="480" src="P1/GoogLeNet/P1ColorLargegraph.png"/>
+
+Sample classification results show good accuracy:
+
+<img height="480" src="P1/GoogLeNet/ClassifyManyImagesP1Color.png"/>
+
 
 ### Part Two "Traffic Signs"
 
