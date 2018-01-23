@@ -241,7 +241,9 @@ While the raw images in the LISA dataset were used to create the training and va
         </td>
     </tr>
         <th colspan=2>Other</th>
-    <th>Pedestrian Crossing</th><th>Yield Ahead</th>
+    </tr>
+    <tr>
+        <th>Pedestrian Crossing</th><th>Yield Ahead</th>
     </tr>
     <tr>
         <td>
