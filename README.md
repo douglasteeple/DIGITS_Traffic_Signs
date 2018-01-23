@@ -42,6 +42,10 @@ Sample classification results show good accuracy:
 
 <img height="480" src="P1/GoogLeNet/ClassifyManyImagesP1Color.png"/>
 
+Sample classified images:
+
+<img height="480" src="P1/GoogLeNet/TopNImageClassificationP1Color.png"/>
+
 
 ### Part Two "Traffic Signs"
 
