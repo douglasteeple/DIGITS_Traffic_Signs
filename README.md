@@ -108,10 +108,10 @@ While the raw images in the LISA dataset were used to create the training and va
     </tr>
     <tr>
         <td>
-            <a href="images/" target=_blank><img height="128" src="images/"/></a>
+            <a href="images/" target=_blank><img height="240" src="images/"/></a>
         </td>
         <td>
-            <a href="images/" target=_blank><img height="128" src="images/"/></a>
+            <a href="images/" target=_blank><img height="240" src="images/"/></a>
         </td>
     </tr>
     <tr>
@@ -119,10 +119,10 @@ While the raw images in the LISA dataset were used to create the training and va
     </tr>
     <tr>
         <td>
-            <a href="images/" target=_blank><img height="128" src="images/"/></a>
+            <a href="images/" target=_blank><img height="240" src="images/"/></a>
         </td>
         <td>
-            <a href="images/" target=_blank><img height="128" src="images/"/></a>
+            <a href="images/stop_test_001.png" target=_blank><img height="240" src="images/stop_test_001.png"/></a>
         </td>
     </tr>
 </table>
