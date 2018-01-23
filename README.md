@@ -65,17 +65,17 @@ The processed images contain just the signs:
 <center>
 <table>
     <tr>
-        <th colspan=2>Raw Traffic Sign Images</th>
+        <th colspan=2>Processed Traffic Sign Images</th>
     </tr>
     <tr>
         <th>Speed Limit 25</th><th>Speed Limit 35</th>
     </tr>
     <tr>
         <td>
-            <a href="images/276_speedLimit_1324866665.avi_image0.png" target=_blank><img height="240" src="images/276_speedLimit_1324866665.avi_image0.png"/></a>
+            <a href="images/276_speedLimit_1324866665.avi_image0.png" target=_blank><img height="128" src="images/276_speedLimit_1324866665.avi_image0.png"/></a>
         </td>
         <td>
-            <a href="images/416_speedLimit_1324866807.avi_image0.png" target=_blank><img height="240" src="images/416_speedLimit_1324866807.avi_image0.png"/></a>
+            <a href="images/416_speedLimit_1324866807.avi_image0.png" target=_blank><img height="128" src="images/416_speedLimit_1324866807.avi_image0.png"/></a>
         </td>
     </tr>
     <tr>
@@ -83,10 +83,10 @@ The processed images contain just the signs:
     </tr>
     <tr>
         <td>
-            <a href="images/176_yield_1323816786.avi_image19.png" target=_blank><img height="240" src="images/176_yield_1323816786.avi_image19.png"/></a>
+            <a href="images/176_yield_1323816786.avi_image19.png" target=_blank><img height="128" src="images/176_yield_1323816786.avi_image19.png"/></a>
         </td>
         <td>
-            <a href="images/1410_stop_1324866481.avi_image15.png" target=_blank><img height="240" src="images/1410_stop_1324866481.avi_image15.png"/></a>
+            <a href="images/1410_stop_1324866481.avi_image15.png" target=_blank><img height="128" src="images/1410_stop_1324866481.avi_image15.png"/></a>
         </td>
     </tr>
 </table>
