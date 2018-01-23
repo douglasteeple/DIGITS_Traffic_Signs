@@ -71,7 +71,7 @@ Only the file name, the annotation tag and the sign image coordinates are used i
 
 The processed images are cropped from the raw data to contain just the signs:
 
-<p text-align=center>
+<p "text-align=center">
 <table>
     <tr>
         <th colspan=2>Processed Traffic Sign Images</th>
@@ -105,25 +105,52 @@ The raw and processed images are mixture of grayscale and color images. The DIGI
 
 The count of **training** images for each class are:
 
-
-| Tag           | Count  |
-|: ------------- |------:|
-| stop           | 1413  |
-| yield          |   85  |
-| SpeedLimit 25  |  245  |
-| SpeedLimit 35  |  404  |
-
+<p "text-align=center">
+<table>
+    <tr>
+        <th colspan=2>Training Traffic Sign Image Counts</th>
+    </tr>
+    <tr>
+        <th>Tag</th><th>Count</th>
+    </tr>
+    <tr>
+        <td>stop</td><td>1413</td>
+    </tr>
+    <tr>
+        <td>yield</td><td>85</td>
+    </tr>
+    <tr>
+        <td>speedLimit25</td><td>245</td>
+    </tr>
+    <tr>
+        <td>speedLimit35</td><td>404</td>
+    </tr>
+</table>
+</p>
 
 The count of **validation** images for each class are:
 
-
-| Tag            | Count  |
-|: ------------- |-------:|
-| stop           | 381    |
-| yield          |  18    |
-| SpeedLimit 25  |  63    |
-| SpeedLimit 35  |  114   |
-
+<p "text-align=center">
+<table>
+    <tr>
+        <th colspan=2>Validation Traffic Sign Image Counts</th>
+    </tr>
+    <tr>
+        <th>Tag</th><th>Count</th>
+    </tr>
+    <tr>
+        <td>stop</td><td>381</td>
+    </tr>
+    <tr>
+        <td>yield</td><td>18</td>
+    </tr>
+    <tr>
+        <td>speedLimit25</td><td>63</td>
+    </tr>
+    <tr>
+        <td>speedLimit35</td><td>114</td>
+    </tr>
+</table>
 
 While the raw images in the LISA dataset were used to create the training and validation set, the test dataset was taken independently using an iPhone.
 
