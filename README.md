@@ -19,6 +19,14 @@ The deployment idea is to create a model classifying traffic signs, download it 
 
 ## Background / Formulation
 
+### Part One "P1"
+
+The P1 dataset was created from the /data/P1/ directory using DIGITS. The images were chosen to be 256x256 color images. The model was chosen as a classification model as it most closely fits the requirements of the project. Two classification models were tested - AlexNet and GoogLeNet. AlexNet did not perform to the rubric requirements and will not be further discussed here. GoogLeNet did acheive the project goals of inference in less than 10ms and greater than 75% accuracy. The **evaluate** results are:
+
+<img height="240" src="P1/GoogLeNet/P1ColorEvaluate.png"/>
+
+### Part Two "Traffic Signs"
+
 Once your data is imported, it is up to you to choose a training model. You can use a pre-supplied one, one from the DIGITS model store, an external network or even customize the above choices.
 
 Your model will have to achieve an inference time of 10 ms or less on the workspace and have an accuracy greater than 75 percent.
