@@ -7,11 +7,11 @@ This project consists of two parts:
 1. Classification training of the supplied P1 dataset of bottles and candy wrappers - the "P1" dataset.
 2. Creation of a Robotic Inference Idea. In this case a traffic sign classification idea was chosen. These images are in the "TrafficeSigns" dataset.
 
-### Part One
+### Part One "P1"
 
 This dataset represents images of bottles and candy wrappers on a conveyor belt passing under a camera. The idea is to sort the items into two bins by activating a swing arm that guides the products to the right bin. The applications of such a recognition system are many, including including for example classification sorting, or identifying defective products.
 
-### Part Two
+### Part Two "Traffic Signs"
 
 This idea was motivated by an interest in autonomous vehicle control. Many lives can be saved on the highways and roadways if the vehicle can monitor unsafe situations and assist in controlling the vehicle. The idea is to recognize traffic signs such as stop, yeild and speed limit signs. Should the driver ignore or not see a stop or yield sign, the autonomous control can take over to ensure vehicle safety. In the case that spped limits are being violated, the vehicle can modify the vehicle speed or advise the driver to do so.
 
@@ -28,6 +28,12 @@ At this stage, you should begin diving into the technical details of your approa
 Explain why you chose the network you did for the supplied data set and then why you chose the network used for your robotic inference project.
 
 ## Data Acquisition
+
+### Part One "P1"
+
+The P1 dataset was provided by Udacity and no processing was required.
+
+### Part Two "Traffic Signs"
 
 The LISA dataset contains over 7,000 traffic sign images. This dataset was chosen for the reality of the images (many signs are small, occluded, blurry, etc) and its sheer volume fo images. While the rubric for the project specifies at least 3 classes of images, 4 classes were chosen. The classes are **stop**, **yield**, **speedLimit25** and **speedLimit35**. The first two classes were chosen due to their imoprtance for vehicle safety. The second two were chosen to set a challenge level of difficuly in distinguishing 25 from 35. 
 
@@ -189,6 +195,10 @@ While the raw images in the LISA dataset were used to create the training and va
 </div>
 
 ## Results
+
+### Part One "P1"
+
+### Part Two "Traffic Signs"
 
 This is typically the hardest part of the report for many. You want to convey your results in an unbiased fashion. If your results are good, you can objectively note this. Similarly, you may do this if they are bad as well. You do not want to justify your results here with discussion; this is a topic for the next session. Present the results of your robotics project model and the model you used for the supplied data with the appropriate accuracy and inference time.
 
