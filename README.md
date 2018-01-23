@@ -81,7 +81,7 @@ The sign images were converted to 256x256 pixels for AlexNet and GoogLeNet, and 
 
 ## Data Acquisition
 
-The LISA dataset contains over 7,000 traffic sign images. This dataset was chosen for the reality of the images (many signs are small, occluded, blurry, etc) and its sheer volume fo images. While the rubric for the project specifies at least 3 classes of images, 4 classes were chosen. The classes are **stop**, **yield**, **speedLimit25** and **speedLimit35**. The first two classes were chosen due to their imoprtance for vehicle safety. The second two were chosen to set a challenge level of difficuly in distinguishing 25 from 35.
+The LISA dataset contains over 7,000 traffic sign images. This dataset was chosen for the reality of the images (many signs are small, occluded, blurry, etc) and its sheer volume fo images. The images were taken from frames of movies taken from a vehicle on actual streets, sometimes stationary and sometime mvoing. While the rubric for the project specifies at least 3 classes of images, 4 classes were chosen. The classes are **stop**, **yield**, **speedLimit25** and **speedLimit35**. The first two classes were chosen due to their imoprtance for vehicle safety. The second two were chosen to set a challenge level of difficuly in distinguishing 25 from 35.
 
 These are examples of raw images of the 4 classes of signs chosen:
 
@@ -282,19 +282,17 @@ This image shows sample classification results:
 
 <img height="480" src="TrafficSignsClassification/LeNet/ClassifyManyImages.png"/>
 
-The results are very encouraging, as the distinction between speedLimit25 and speedLimit35 is clearly being made with high accuracy, typically over 99%.
+The results are very encouraging, as the distinction between speedLimit25 and speedLimit35, for example, is clearly being made with high accuracy, typically over 99%.
 
 ## Discussion
 
-This is the only section of the report where you may include your opinion. However, make sure your opinion is based on facts. If your results are poor, make mention of what may be the underlying issues. If the results are good, why do you think this is the case? Again, avoid writing in the first person (i.e. Do not use words like “I” or “me”). If you really find yourself struggling to avoid the word “I” or “me”; sometimes, this can be avoided with the use of the word “one”. As an example: instead of, "I think the accuracy on my dataset is low because the images are too small to show the necessary detail" try, "one may believe the accuracy on the dataset is low because the images are too small to show the necessary detail". They say the same thing, but the second avoids the first person.
+Traffic sign classification is a difficult task. Images are blurry, small in the field of view, sometime occluded, often rotated or taken at odd angles not straight on. All of these factors make the inference process very difficult. Motion of the vehicle at highway speeds requires that the inferencing be done very quickly in order to be relevant. All of these factors make this project a real challenge.
 
-Reflect on which is more important, inference time or accuracy, in regards to your robotic inference project.
+In the case of imaging taken from a moving vehicle, perhaps at high speed, both accuracy and inference speed are equally important. Clearly, the decision must be made quickly to be relevant and a mistake in classification could be fatal.
 
 ## Conclusion / Future Work
 
 This section is intended to summarize your report. Your summary should include a recap of the results, did this project achieve what you attempted, and is this a commercially viable product? For future work, address areas of work that you may not have addressed in your report as possible next steps. This could be due to time constraints, lack of currently developed methods / technology, and areas of application outside of your current implementation. Again, avoid the use of the first-person.
-
-Your report must be in PDF format. You may use any method to produce this format. If you are looking for a challenge, you can create your project report in LaTeX and then export the report to pdf. Here’s a sample LaTeX report. It’s a fun way to create well formatted documents!
 
 ## References
 
