@@ -7,7 +7,7 @@
 This project consists of two parts:
 
 1. Classification training of the supplied P1 dataset of bottles, candy wrappers and an empty conveyor belt - the "P1" dataset.
-2. Creation of a Robotic Inference idea. In this case a traffic sign classification idea was chosen. These images are in the "TrafficSigns" dataset.
+2. Creation of a Robotic Inference idea. In this case a traffic sign classification idea was chosen. The images are in the "TrafficSigns" dataset.
 
 <hr>
 
@@ -15,7 +15,7 @@ This project consists of two parts:
 
 ## Background / Formulation
 
-The P1 dataset consists of images of bottles, candy wrappers and empty belt on a conveyor belt passing under a camera. The idea is to sort the items into two bins by activating a swing arm that guides the products to the right bin. The applications of such a recognition system are many, including including for example classification sorting, or identifying defective products.
+The P1 dataset consists of images of bottles, candy wrappers and no object on a conveyor belt passing under a camera. The idea is to sort the items into bins by activating a swing arm that guides the products to the right bin. The applications of such a recognition system are many, including including, for example, classification sorting or identifying defective products.
 
 The P1 dataset was created from the /data/P1/ directory using DIGITS. The images were chosen to be 256x256 color images. The model was chosen as a classification model as it most closely fits the requirements of the project. Two classification models were tested - AlexNet and GoogLeNet. AlexNet did not perform to the rubric requirements and will not be further discussed here. GoogLeNet did achieve the project goals of inference in less than 10ms and greater than 75% accuracy.
 
@@ -260,39 +260,39 @@ While the raw images in the LISA dataset were used to create the training and va
 
 The TrafficSigns dataset was created as follows:
 
-<img height="480" src="TrafficSignsClassification/AlexNet/TrafficSignsDataSet.png" style="margin:0px auto;display:block"/>
+<img height="480" src="TrafficSignsClassification/AlexNet/TrafficSignsDataSet.png" style="margin:0px auto;display:block" />
 
-THe only difference between LeNet vs GoogLeNet / AlexNet datasets was that the former images size was stretched to 32x32 and the latter 256x256 pixels. In all models the number of epochs parameter was set to 5.
+The only difference between LeNet vs GoogLeNet / AlexNet datasets was that the LeNet images size was stretched to 32x32 and GoogLeNet / AlexNet was strecthed to 256x256 pixels. In all models the number of epochs parameter was set to 5.
 
 The results for AlexNet and GoogLeNet as shown below were poor. AlexNet achieved only 80% accuracy:
 
-<img height="480" src="TrafficSignsClassification/AlexNet/TrafficSignsAlexNet-1.png"/>
+<img height="480" src="TrafficSignsClassification/AlexNet/TrafficSignsAlexNet-1.png" style="margin:0px auto;display:block" />
 
-GoogLeNet acheived about 90% accuracy:
+GoogLeNet achieved about 90% accuracy:
 
-<img height="480" src="TrafficSignsClassification/GoogLeNet/TrafficSignsGoogLeNet-1.png"/>
+<img height="480" src="TrafficSignsClassification/GoogLeNet/TrafficSignsGoogLeNet-1.png" style="margin:0px auto;display:block" />
 
 These models will not be discussed further. 
 
 LeNet gave excellent results and will be dicussed in more detail. LeNet gave an accuracy of almost 100%:
 
-<img height="480" src="TrafficSignsClassification/LeNet/TrafficSignsLeNetLargegraph.png"/>
+<img height="480" src="TrafficSignsClassification/LeNet/TrafficSignsLeNetLargegraph.png" style="margin:0px auto;display:block" />
 
 This image shows a portion of the training dataset:
 
-<img height="480" src="TrafficSignsClassification/LeNet/TrafficSignsTrainExplorer.png"/>
+<img height="480" src="TrafficSignsClassification/LeNet/TrafficSignsTrainExplorer.png" style="margin:0px auto;display:block" />
 
 This image shows a portion of the validation dataset:
 
-<img height="480" src="TrafficSignsClassification/LeNet/TrafficSignsValidateExplorer.png"/>
+<img height="480" src="TrafficSignsClassification/LeNet/TrafficSignsValidateExplorer.png" style="margin:0px auto;display:block" />
 
 The LeNet model was used with no modifications in DIGITS:
 
-<img height="480" src="TrafficSignsClassification/LeNet/LeNetDiagram.png"/>
+<img height="480" src="TrafficSignsClassification/LeNet/LeNetDiagram.png" style="margin:0px auto;display:block" />
 
 This image shows sample classification results:
 
-<img height="480" src="TrafficSignsClassification/LeNet/ClassifyManyImages.png"/>
+<img height="480" src="TrafficSignsClassification/LeNet/ClassifyManyImages.png" style="margin:0px auto;display:block" />
 
 The results are very encouraging, as the distinction between speedLimit25 and speedLimit35, for example, is clearly being made with high accuracy, typically over 99%.
 
