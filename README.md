@@ -152,6 +152,8 @@ The count of **validation** images for each class are:
     </tr>
 </table>
 
+The split im number of training / validation images was set at 80% / 20% in the doit.sh bash script.
+
 While the raw images in the LISA dataset were used to create the training and validation set, the test dataset was taken independently using an iPhone.
 
 <div align="center">
