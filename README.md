@@ -128,7 +128,7 @@ Only the file name, the annotation tag and the sign image coordinates are used t
 The processed images are cropped from the raw data to contain just the sign faces:
 
 <div style="text-align:center; margin-left:auto; margin-right:auto;">
-<table>
+<table align="center">
     <tr>
         <th colspan=2>Processed Traffic Sign Images</th>
     </tr>
