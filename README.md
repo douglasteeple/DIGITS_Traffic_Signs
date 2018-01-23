@@ -94,9 +94,40 @@ The processed images are cropped from the raw data to contain just the signs:
 </table>
 </center>
 
-The raw and processed images are mixture of grayscale and color images. The DIGITS DataSet creation process converts all the images to grayscale. The processed images are crop to a size of 32x32 pixels.
+The raw and processed images are mixture of grayscale and color images. The DIGITS DataSet creation process converts all the images to grayscale. The processed images are cropped to a size of 32x32 pixels.
 
 While the raw images in the LISA dataset were used to create the training and validation set, the test dataset was taken independently using an iPhone.
+
+<center>
+<table>
+    <tr>
+        <th colspan=2>Test Traffic Sign Images</th>
+    </tr>
+    <tr>
+        <th>Speed Limit 25</th><th>Speed Limit 35</th>
+    </tr>
+    <tr>
+        <td>
+            <a href="images/" target=_blank><img height="128" src="images/"/></a>
+        </td>
+        <td>
+            <a href="images/" target=_blank><img height="128" src="images/"/></a>
+        </td>
+    </tr>
+    <tr>
+        <th>Yield</th><th>Stop</th>
+    </tr>
+    <tr>
+        <td>
+            <a href="images/" target=_blank><img height="128" src="images/"/></a>
+        </td>
+        <td>
+            <a href="images/" target=_blank><img height="128" src="images/"/></a>
+        </td>
+    </tr>
+</table>
+</center>
+
 
 This section should discuss the data set. Items to include are the number of images, size of the images, the types of images (RGB, Grayscale, etc.), how these images were collected (including the method). Providing this information is critical if anyone would like to replicate your results. After all, the intent of reports such as these is to convey information and build upon ideas so you want to ensure others can validate your process.
 
