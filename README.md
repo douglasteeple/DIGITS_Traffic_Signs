@@ -20,14 +20,14 @@ The P1 dataset consists of images of bottles, candy wrappers and no object on a 
 The P1 dataset was created from the /data/P1/ directory using DIGITS. The images were chosen to be 256x256 color images. The model was chosen as a classification model as it most closely fits the requirements of the project. Two classification models were tested - AlexNet and GoogLeNet. AlexNet did not perform to the rubric requirements and will not be further discussed here. GoogLeNet did achieve the project goals of inference in less than 10ms and greater than 75% accuracy.
 
 The model was built as shown:
-<p style="align:center">
+<div style="align:center">
 <img height="480" src="P1/GoogLeNet/P1ColorScreen-1.png" style="margin:0px auto;display:block"/>
-</p>
-<p style="text-align:center">
+</div>
+<div style="text-align:center">
 <img height="480" src="P1/GoogLeNet/P1ColorScreen-2.png" style="margin:0px auto;display:block"/>
-</p>
+</div>
 
-THe only parameter changed from the DIGITS defaults was the epochs which were set to 5.
+The only parameter changed from the DIGITS defaults was the number of epochs which was set to 5.
 
 ## Data Acquisition
 
@@ -85,7 +85,7 @@ The LISA dataset contains over 7,000 traffic sign images. This dataset was chose
 
 These are examples of raw images of the 4 classes of signs chosen:
 
-<div style="text-align:center">
+<div align=center>
 <table>
     <tr>
         <th colspan=2>Raw Traffic Sign Images</th>
@@ -127,8 +127,8 @@ Only the file name, the annotation tag and the sign image coordinates are used t
 
 The processed images are cropped from the raw data to contain just the sign faces:
 
-<div style="text-align:center; margin-left:auto; margin-right:auto;">
-<table align="center">
+<div>
+<table style="float:right">
     <tr>
         <th colspan=2>Processed Traffic Sign Images</th>
     </tr>
