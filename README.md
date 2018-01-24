@@ -27,10 +27,10 @@ The P1 dataset was created from the /data/P1/ directory using DIGITS. The images
 
 The model was built as shown:
 <div style="align:center">
-<img width="800" src="P1/GoogLeNet/P1ColorScreen-1.png" style="margin:0px auto;display:block"/>
+<img border=2 width="800" src="P1/GoogLeNet/P1ColorScreen-1.png" style="margin:0px auto;display:block"/>
 </div>
 <div style="text-align:center">
-<img width="800" src="P1/GoogLeNet/P1ColorScreen-2.png" style="margin:0px auto;display:block"/>
+<img border=2 width="800" src="P1/GoogLeNet/P1ColorScreen-2.png" style="margin:0px auto;display:block"/>
 </div>
 
 The only parameter changed from the DIGITS defaults was the number of epochs which was set to 5.
