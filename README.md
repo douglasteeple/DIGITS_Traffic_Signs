@@ -44,7 +44,9 @@ The P1 dataset was provided by Udacity and no processing was required. THe train
 
 The **evaluate** results for color images are:
 
-<img width="800" src="P1/GoogLeNet/P1ColorEvaluate.png"/>
+<table><tr><td>
+    <img width="100%" src="P1/GoogLeNet/P1ColorEvaluate.png"/>
+</td></tr></table>
 
 The model clearly passes the project requirements of > 75% acccuracy and procesing time of less than 10ms.
 
@@ -54,11 +56,15 @@ The training accuracy graph as given by the model is:
 
 Sample classification results show good accuracy:
 
-<img width="640" src="P1/GoogLeNet/ClassifyManyImagesP1Color.png"/>
+<table><tr><td>
+    <img width="100%" src="P1/GoogLeNet/ClassifyManyImagesP1Color.png"/>
+</td></tr></table>
 
 Sample classified images:
 
-<img width="800" src="P1/GoogLeNet/TopNImageClassificationP1Color.png"/>
+<table><tr><td>
+    <img width="100%" src="P1/GoogLeNet/TopNImageClassificationP1Color.png"/>
+</td></tr></table>
 
 Both grayscale and color images were tested. It was found that grayscale could only achieve about 72% accuracy, so color images were used.
 
@@ -268,39 +274,55 @@ While the raw images in the LISA dataset were used to create the training and va
 
 The TrafficSigns dataset was created as follows:
 
-<img width="800" src="TrafficSignsClassification/AlexNet/TrafficSignsDataSet.png" style="margin:0px auto;display:block; align:center;" />
+<table><tr><td>
+    <img width="100%" src="TrafficSignsClassification/AlexNet/TrafficSignsDataSet.png"/>
+</td></tr></table>
 
 The only difference between LeNet vs GoogLeNet / AlexNet datasets was that the LeNet images size was stretched to 32x32 and GoogLeNet / AlexNet was strecthed to 256x256 pixels. In all models the number of epochs parameter was set to 5.
 
 The results for AlexNet and GoogLeNet as shown below were poor. AlexNet achieved only 80% accuracy:
 
-<img width="800" src="TrafficSignsClassification/AlexNet/TrafficSignsAlexNet-1.png" style="margin:0px auto;display:block" />
+<table><tr><td>
+    <img width="100%" src="TrafficSignsClassification/AlexNet/TrafficSignsAlexNet-1.png"/>
+</td></tr></table>
 
 GoogLeNet achieved about 90% accuracy:
 
-<img width="800" src="TrafficSignsClassification/GoogLeNet/TrafficSignsGoogLeNet-1.png" style="margin:0px auto;display:block" />
+<table><tr><td>
+    <img width="100%" src="TrafficSignsClassification/GoogLeNet/TrafficSignsGoogLeNet-1.png" />
+</td></tr></table>
 
 These models will not be discussed further. 
 
 LeNet gave excellent results and will be discussed in more detail. LeNet gave an accuracy of almost 100%:
 
-<img width="800" src="TrafficSignsClassification/LeNet/TrafficSignsLeNetLargegraph.png" style="margin:0px auto;display:block" />
+<table><tr><td>
+    <img width="100%" src="TrafficSignsClassification/LeNet/TrafficSignsLeNetLargegraph.png" />
+</td></tr></table>
 
 This image shows a portion of the training dataset:
 
-<img width="800" src="TrafficSignsClassification/LeNet/TrafficSignsTrainExplorer.png" style="margin:0px auto;display:block" />
+<table><tr><td>
+    <img width="100%" src="TrafficSignsClassification/LeNet/TrafficSignsTrainExplorer.png" />
+</td></tr></table>
 
 This image shows a portion of the validation dataset:
 
-<img width="800" src="TrafficSignsClassification/LeNet/TrafficSignsValidateExplorer.png" style="margin:0px auto;display:block" />
+<table><tr><td>
+    <img width="100%" src="TrafficSignsClassification/LeNet/TrafficSignsValidateExplorer.png" />
+</td></tr></table>
 
 The LeNet model was used with no modifications in DIGITS:
 
-<img width="800" src="TrafficSignsClassification/LeNet/LeNetDiagram.png" style="margin:0px auto;display:block" />
+<table><tr><td>
+    <img width="100%" src="TrafficSignsClassification/LeNet/LeNetDiagram.png" />
+</td></tr></table>
 
 This image shows sample classification results:
 
-<img width="800" src="TrafficSignsClassification/LeNet/ClassifyManyImages.png" style="margin:0px auto;display:block" />
+<table><tr><td>
+    <img width="100%" src="TrafficSignsClassification/LeNet/ClassifyManyImages.png" />
+</td></tr></table>
 
 The results are very encouraging, as the distinction between speedLimit25 and speedLimit35, for example, is clearly being made with high accuracy, typically over 99%.
 
