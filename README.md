@@ -56,6 +56,8 @@ Sample classified images:
 
 Both grayscale and color images were tested. It was found that grayscale could only achieve about 72% accuracy, so color images were used.
 
+The model can be found <a href="P1/GoogLeNet/model/20180123-001517-751c_epoch_5.0/" target=_blank>here</a>.
+
 ## Discussion
 
 The GoogLeNet model performed well on 256x256 color imagaes, meeting the project requirements. In the case of a conveyor belt moving at the speed shown in the class, clearly the 5ms decision time is adequate for the sorting job. So in this case, accuracy is more important than inference speed, as long as it is kept less than perhaps 1/2 second.
@@ -295,6 +297,9 @@ This image shows sample classification results:
 <img height="480" src="TrafficSignsClassification/LeNet/ClassifyManyImages.png" style="margin:0px auto;display:block" />
 
 The results are very encouraging, as the distinction between speedLimit25 and speedLimit35, for example, is clearly being made with high accuracy, typically over 99%.
+
+The model can be found <a href="rafficSignsClassification/LeNet/model/20180122-195121-f6f2_epoch_5.0/" target=_blank>here</a>.
+
 
 ### Test Image Results
 
