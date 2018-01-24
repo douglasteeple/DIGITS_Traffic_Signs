@@ -298,7 +298,7 @@ This image shows sample classification results:
 
 The results are very encouraging, as the distinction between speedLimit25 and speedLimit35, for example, is clearly being made with high accuracy, typically over 99%.
 
-The model can be found <a href="rafficSignsClassification/LeNet/model/20180122-195121-f6f2_epoch_5.0/" target=_blank>here</a>.
+The model can be found <a href="TrafficSignsClassification/LeNet/model/20180122-195121-f6f2_epoch_5.0/" target=_blank>here</a>.
 
 
 ### Test Image Results
