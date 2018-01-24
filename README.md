@@ -26,8 +26,8 @@ The P1 dataset consists of images of bottles, candy wrappers and no object on a 
 The P1 dataset was created from the /data/P1/ directory using DIGITS. The images were chosen to be 256x256 color images. The model was chosen as a classification model as it most closely fits the requirements of the project. Two classification models were tested - AlexNet and GoogLeNet. AlexNet did not perform to the rubric requirements and will not be further discussed here. GoogLeNet did achieve the project goals of inference in less than 10ms and greater than 75% accuracy.
 
 The model was built as shown:
-<div style="align:center">
-<img border=2 width="800" src="P1/GoogLeNet/P1ColorScreen-1.png" style="margin:0px auto;display:block"/>
+<div style="margin:0px auto;display:block">
+<img style="border: border-width: 25px; border-color: red; border-style: solid" width="800" src="P1/GoogLeNet/P1ColorScreen-1.png" />
 </div>
 <div style="text-align:center">
 <img border=2 width="800" src="P1/GoogLeNet/P1ColorScreen-2.png" style="margin:0px auto;display:block"/>
