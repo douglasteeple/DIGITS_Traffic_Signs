@@ -2,6 +2,10 @@
 
 <hr>
 
+## Abstract
+
+Two image classification deep neural network projects are presented. The first is a classification model of a given dataset of images of bottles, candy wrappers and nothing on a conveyor belt. The model is trained to classify images into one of the three classes from the given dataset. The process of building the dataset, creating the model and the results of testing are given. The second is a traffic sign dataset from the LISA publically available dataset and test images taken independently. THe model is to classify images containing traffic signs into stop, yield, speed limit 25 and speed limit 35 classes. THe process of extracting sign faces from the 7,000+ images dataset is documented. Three models are tested; AlexNet, GoogLeNet and LeNet. Results show that LeNet provides the best traffic sign classification, likely due to a good "impedance" match between the preferred image size of LeNet and the trafic sign face images.
+
 ## Introduction
 
 This project consists of two parts:
