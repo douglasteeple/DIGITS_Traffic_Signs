@@ -1,0 +1,26 @@
+{
+    "caffe flavor": "NVIDIA",
+    "caffe version": "0.15.14",
+    "creation time": "2018-01-22 19:51:21.790643",
+    "dataset_id": "20180122-194455-8037",
+    "deploy file": "deploy.prototxt",
+    "digits version": "6.0.0",
+    "framework": "caffe",
+    "id": "20180122-195121-f6f2",
+    "image dimensions": [
+        32,
+        32,
+        1
+    ],
+    "image resize mode": "squash",
+    "job id": "20180122-195121-f6f2",
+    "labels file": "labels.txt",
+    "mean file": "mean.binaryproto",
+    "model file": "original.prototxt",
+    "name": "TrafficSignsLeNet",
+    "snapshot file": "snapshot_iter_170.caffemodel",
+    "solver file": "solver.prototxt",
+    "status": "Done",
+    "train_val file": "train_val.prototxt",
+    "username": "douglasteeple"
+}
