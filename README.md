@@ -157,7 +157,7 @@ The processed images are cropped from the raw data to contain just the sign face
 </table>
 </div>
 
-The raw and processed images are mixture of grayscale and color images. The DIGITS DataSet creation process converts all the images to grayscale. The processed images are cropped to a comomn size of 32x32 pixels in DIGITS.
+The raw and processed images are mixture of grayscale and color images. The DIGITS DataSet creation process converts all the images to grayscale. The processed images are stretched to a comomn size of 32x32 pixels in DIGITS.
 
 The count of **training** images for each class are:
 
@@ -274,7 +274,7 @@ GoogLeNet achieved about 90% accuracy:
 
 These models will not be discussed further. 
 
-LeNet gave excellent results and will be dicussed in more detail. LeNet gave an accuracy of almost 100%:
+LeNet gave excellent results and will be discussed in more detail. LeNet gave an accuracy of almost 100%:
 
 <img height="480" src="TrafficSignsClassification/LeNet/TrafficSignsLeNetLargegraph.png" style="margin:0px auto;display:block" />
 
@@ -296,21 +296,27 @@ This image shows sample classification results:
 
 The results are very encouraging, as the distinction between speedLimit25 and speedLimit35, for example, is clearly being made with high accuracy, typically over 99%.
 
+### Test Image Results
+
+The model was loaded on to a Jetson TX2 and the test images analyzed.
+
 ## Discussion
 
-Traffic sign classification is a difficult task. Images are blurry, small in the field of view, sometime occluded, often rotated or taken at odd angles not straight on. All of these factors make the inference process very difficult. Motion of the vehicle at highway speeds requires that the inferencing be done very quickly in order to be relevant. All of these factors make this project a real challenge.
+Traffic sign classification is a difficult task. Images are typically blurry, small in the field of view, sometime occluded, often rotated or taken at odd angles. All of these factors make the inference process a challenge. Motion of the vehicle at highway speeds requires that the inferencing be done very quickly in order to be relevant. All of these factors contribute to make this project a real challenge.
 
-The availability of large numbers of images for training and validation is a valuable asset. The LISA dataset has over 7,000 real world images.
+LeNet gave the best results, perhaps due to a good "impedance" match between the sign face sizes and the image size used by LeNet which is 28x28 pixels. Each sign face is different in size, depending on the size of the sign in each raw image, but each is about 32x32 pixels, so very little stratching was needed. GoogLeNet and AlexNet expected an image size of 256x256 pixels. The extreme stratching of the sign faces made very blurry images, an consequently poor model results.
+
+The availability of large numbers of images for training and validation is a valuable asset. The LISA dataset has over 7,000 real world images. The annotations CSV files were also a great asset, greatly simplifying the process of extracting sign faces.
 
 In the case of imaging taken from a moving vehicle, perhaps at high speed, both accuracy and inference speed are equally important. Clearly, the decision must be made quickly to be relevant and a mistake in classification could be fatal.
 
-A greater variety of traffic signs needs to be in the dataset and to be classified in order to be useful in the real world. There are perhaps in the order hundreds of different trffic signs. Any real world deploymnet would need to recognize this large number of classes.
+A greater variety of traffic signs needs to be in the dataset and to be classified in order to be useful in the real world. There are perhaps in the order hundreds of different traffic signs. Any real world deployment would need to recognize this large number of classes.
 
 ## Conclusion / Future Work
 
-The project was a success achieving typically 99% accuracy in classification. Further work would be in creating a larger dataset with more kinds of traffic signs and extending the model to classify perhaps hudreds of different signs.
+The project was a success achieving typically 99% accuracy in classification. Further work would be in creating a larger dataset with more kinds of traffic signs and extending the model to classify perhaps hundreds of different signs.
 
-One fascinating aspect of traffic signs is "dynamic" signs such as traffic lights. Grayscale images were used in this project because many automobiles are not equpipped with color cameras. This present a challenge for distinguishing whether a traffic signal is "Red" or "Green". Persons that are color blind have a similar problem when driving, being unable to see red vs green color in the lights. However, "Red" is always the top light and green the bottom, so the light color can be distinguished from brightness of the topmost vs the bottom most light. A model that specifically addresses traffic lights would be a fascinating follow on project.
+One fascinating aspect of traffic signs is "dynamic" signs such as traffic lights. Grayscale images were used in this project because many self-driving automobiles are equpipped with only grayscale cameras. This present a challenge for distinguishing whether a traffic signal is "Red" or "Green". Persons that are color blind have a similar problem when driving, being unable to see red vs green color in the lights. However, "Red" is always the top light and green the bottom, so the light color can be distinguished from brightness of the top-most vs the bottom-most light. A model that specifically addresses traffic lights would be a fascinating follow-on project.
 
 ## References
 
