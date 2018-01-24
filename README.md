@@ -8,12 +8,12 @@ Two image classification deep neural network projects are presented. The first i
 
 ## Introduction
 
-This project consists of two parts:
+This document describes the Udacity Term 2 Robotic Inference project. The project consists of two parts:
 
 1. Classification training of the supplied P1 dataset of bottles, candy wrappers and an empty conveyor belt - the "P1" dataset.
 2. Creation of a Robotic Inference idea. In this case a traffic sign classification idea was chosen. The images are in the "TrafficSigns" dataset.
 
-This document describes the steps taken and results achieved in implementing each of these projects.
+This document describes the steps taken in preparing the data, developing the model and testing the model and the results achieved in implementing each of these projects.
 
 <hr>
 
