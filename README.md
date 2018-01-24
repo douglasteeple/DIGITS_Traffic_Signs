@@ -87,7 +87,7 @@ The sign images were converted to 256x256 pixels for AlexNet and GoogLeNet, and 
 
 ## Data Acquisition
 
-The LISA dataset contains over 7,000 traffic sign images. This dataset was chosen for the reality of the images (many signs are small, occluded, blurry, etc) and its sheer volume fo images. The images were taken from frames of movies taken from a vehicle on actual streets, sometimes stationary and sometime mvoing. While the rubric for the project specifies at least 3 classes of images, 4 classes were chosen. The classes are **stop**, **yield**, **speedLimit25** and **speedLimit35**. The first two classes were chosen due to their imoprtance for vehicle safety. The second two were chosen to set a challenge level of difficuly in distinguishing 25 from 35.
+The <a href="http://cvrr.ucsd.edu/LISA/lisa-traffic-sign-dataset.html">LISA</a> dataset contains over 7,000 traffic sign images. This dataset was chosen for the reality of the images (many signs are small, occluded, blurry, etc) and its sheer volume fo images. The images were taken from frames of movies taken from a vehicle on actual streets, sometimes stationary and sometime mvoing. While the rubric for the project specifies at least 3 classes of images, 4 classes were chosen. The classes are **stop**, **yield**, **speedLimit25** and **speedLimit35**. The first two classes were chosen due to their imoprtance for vehicle safety. The second two were chosen to set a challenge level of difficuly in distinguishing 25 from 35.
 
 These are examples of raw images of the 4 classes of signs chosen:
 
