@@ -228,7 +228,7 @@ The split in number of training / validation images was set at 80% / 20% in the 
 While the raw images in the LISA dataset were used to create the training and validation set, the test dataset was taken independently using an iPhone.
 
 <center>
-<table>
+<table width="100%">
     <tr>
         <th colspan=2>Test Traffic Sign Images</th>
     </tr>
