@@ -52,7 +52,7 @@ The model clearly passes the project requirements of > 75% acccuracy and procesi
 
 The training accuracy graph as given by the model is:
 
-<img width="800" src="P1/GoogLeNet/P1ColorLargegraph.png"/>
+<img width="100%" src="P1/GoogLeNet/P1ColorLargegraph.png"/>
 
 Sample classification results show good accuracy:
 
