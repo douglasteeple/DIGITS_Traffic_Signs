@@ -141,7 +141,7 @@ Only the file name, the annotation tag and the sign image coordinates are used t
 
 The processed images are cropped from the raw data to contain just the sign faces:
 
-<div>
+<center>
 <table style="float:right">
     <tr>
         <th colspan=2>Processed Traffic Sign Images</th>
@@ -169,13 +169,13 @@ The processed images are cropped from the raw data to contain just the sign face
         </td>
     </tr>
 </table>
-</div>
+</center>
 
 The raw and processed images are mixture of grayscale and color images. The DIGITS DataSet creation process converts all the images to grayscale. The processed images are stretched to a comomn size of 32x32 pixels in DIGITS.
 
 The count of **training** images for each class are:
 
-<div style="text-align:center">
+<center>
 <table>
     <tr>
         <th colspan=2>Training Traffic Sign Image Counts</th>
@@ -196,11 +196,11 @@ The count of **training** images for each class are:
         <td>speedLimit35</td><td>404</td>
     </tr>
 </table>
-</div>
+</denter>
 
 The count of **validation** images for each class are:
 
-<div style="text-align:center">
+<center>
 <table>
     <tr>
         <th colspan=2>Validation Traffic Sign Image Counts</th>
@@ -221,13 +221,13 @@ The count of **validation** images for each class are:
         <td>speedLimit35</td><td>114</td>
     </tr>
 </table>
-</div>
+</center>
 
 The split in number of training / validation images was set at 80% / 20% in the doit.sh bash script.
 
 While the raw images in the LISA dataset were used to create the training and validation set, the test dataset was taken independently using an iPhone.
 
-<div style="text-align:center">
+<center>
 <table>
     <tr>
         <th colspan=2>Test Traffic Sign Images</th>
@@ -268,7 +268,7 @@ While the raw images in the LISA dataset were used to create the training and va
         </td>
     </tr>
 </table>
-</div>
+</center>
 
 ## Results
 
