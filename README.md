@@ -240,7 +240,7 @@ While the raw images in the LISA dataset were used to create the training and va
             <a href="images/test/speedLimit25_test_001.png" target=_blank><img height="240" src="images/test/speedLimit25_test_001.png"/></a>
         </td>
         <td>
-            <a href="images/" target=_blank><img height="240" src="images/"/></a>
+            <a href="images/test/speedLimit25_test_002.png" target=_blank><img height="240" src="images/test/speedLimit25_test_002.png"/></a>
         </td>
     </tr>
     <tr>
