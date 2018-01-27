@@ -13,7 +13,7 @@ This document describes the Udacity Term 2 Robotic Inference project. The projec
 1. Classification training of the supplied P1 dataset of bottles, candy wrappers and an empty conveyor belt - the "P1" dataset.
 2. Creation of a Robotic Inference idea. In this case a traffic sign classification idea was chosen. The images are in the "TrafficSigns" dataset.
 
-The follwoing sections describe the steps taken in preparing the data, developing the model and testing the model and the results achieved in implementing each of these projects.
+The following sections describe the steps taken in preparing the data, developing the model and testing the model and the results achieved in implementing each of these projects.
 
 <hr>
 
@@ -30,19 +30,19 @@ A sample of the P1 dataset source files:
     <img width="100%" src="P1/GoogLeNet/P1_Color_SourceImages.png" />
 </td></tr></table>
 
-The dataset was created as 256x256 color images:
+The dataset was created as 256x256 color images, with the defailt training/validation % split:
+
 <table><tr><td>
     <img width="100%" src="P1/GoogLeNet/P1_Color_Dataset-1.png" />
     <img width="100%" src="P1/GoogLeNet/P1_Color_Dataset-2.png" />
 </td></tr></table>
 
-
 The model was built as shown:
 <table><tr><td>
-    <img width="100%" src="P1/GoogLeNet/P1ColorScreen-1.png" />
+    <img width="100%" src="P1/GoogLeNet/P1_Color_GoogLeNet-1.png" />
 </td></tr></table>
 <table><tr><td>
-    <img width="100%" src="P1/GoogLeNet/P1ColorScreen-2.png" />
+    <img width="100%" src="P1/GoogLeNet/P1_Color_GoogLeNet-2.png" />
 </td></tr></table>
 
 The only parameter changed from the DIGITS defaults was the number of epochs which was set to 5.
