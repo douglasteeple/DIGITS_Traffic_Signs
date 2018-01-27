@@ -72,12 +72,6 @@ Sample classification results show good accuracy:
     <img width="100%" src="P1/GoogLeNet/ClassifyManyImagesP1Color.png"/>
 </td></tr></table>
 
-Sample classified images:
-
-<table><tr><td>
-    <img width="100%" src="P1/GoogLeNet/TopNImageClassificationP1Color.png"/>
-</td></tr></table>
-
 Both grayscale and color images were tested. It was found that grayscale could only achieve about 72% accuracy, so color images were used.
 
 The model can be found <a href="P1/GoogLeNet/model/20180123-001517-751c_epoch_5.0/" target=_blank>here</a>.
