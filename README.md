@@ -343,6 +343,73 @@ The model can be found <a href="TrafficSignsClassification/LeNet/model/20180122-
 
 The model was loaded on to a Jetson TX2 and the test images analyzed.
 
+**Jetson TX2 Testing** output images:
+
+<center>
+<table width="100%">
+    <tr>
+        <th colspan=2>Test Traffic Sign Images</th>
+    </tr>
+    <tr>
+        <th>Speed Limit 25</th><th>Speed Limit 35</th>
+    </tr>
+    <tr>
+        <td>
+            <a href="images/out256/speedLimit25_test_001.png" target=_blank><img height="240" src="images/test/speedLimit25_test_001.png"/></a>
+        </td>
+        <td>
+            <a href="images/out256/speedLimit35_test_001.png" target=_blank><img height="240" src="images/test/speedLimit35_test_001.png"/></a>
+        </td>
+    </tr>
+    <tr>
+        <th>Yield</th><th>Stop</th>
+    </tr>
+    <tr>
+        <td>
+            <a href="images/out256/yield_test_001.png" target=_blank><img height="240" src="images/test/yield_test_001.png"/></a>
+        </td>
+        <td>
+            <a href="images/out256/stop_test_001.png" target=_blank><img height="240" src="images/test/stop_test_001.png"/></a>
+        </td>
+    </tr>
+        <th colspan=2>Other</th>
+    </tr>
+    <tr>
+        <th>Pedestrian Crossing</th><th>Yield Ahead</th>
+    </tr>
+    <tr>
+        <td>
+            <a href="images/out256/pedestrianCrossing_test_001.png" target=_blank><img height="240" src="images/test/pedestrianCrossing_test_001.png"/></a>
+        </td>
+        <td>
+            <a href="images/out256/yieldAhead_test_001.png" target=_blank><img height="240" src="images/test/yieldAhead_test_001.png"/></a>
+        </td>
+    </tr>
+</table>
+</center>
+
+The results were poor with only a 25% success rate:
+
+```cat ~/Desktop/TX2_log.txt | grep 'class #'
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/keepRight_test_001.png' -> 99.15723% class #2 (stop)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/roundabout_test_001.png' -> 99.75668% class #2 (stop)
+***OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit35_test_002.png' -> 74.46257% class #1 (speedLimit35)***
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/various_test_001.png' -> 98.85838% class #3 (yield)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_001.png' -> 68.85816% class #3 (yield)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit25_test_001.png' -> 78.77179% class #3 (yield)
+OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_001.png' -> 99.99680% class #2 (stop)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yieldAhead_test_001.png' -> 92.12694% class #3 (yield)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_002.png' -> 44.04021% class #2 (stop)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit25_test_002.png' -> 99.95559% class #2 (stop)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_002.png' -> 47.60285% class #0 (speedLimit25)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yieldAhead_test_002.png' -> 94.01840% class #3 (yield)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrian_test_001.png' -> 99.90257% class #3 (yield)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit35_test_001.png' -> 90.12273% class #0 (speedLimit25)
+OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_003.png' -> 99.99535% class #2 (stop)
+OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yield_test_001.png' -> 54.82035% class #3 (yield)
+4 / 16 OK
+```
+
 ## Discussion
 
 Traffic sign classification is a difficult task. Images are typically blurry, small in the field of view, sometime occluded, often rotated or taken at odd angles. All of these factors make the inference process a challenge. Motion of the vehicle at highway speeds requires that the inferencing be done very quickly in order to be relevant. All of these factors contribute to make this project a real challenge.
