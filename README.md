@@ -341,7 +341,7 @@ The model can be found <a href="TrafficSignsClassification/LeNet/model/20180122-
 
 ### Test Image Results
 
-The model was loaded on to a Jetson TX2 and the test images analyzed. The model was run by the deply.sh script, whcih called the jetson-inference program with each test image and the model:
+The model was loaded on to a Jetson TX2 and the test images analyzed. The model was run by the deploy.sh script, whcih called the jetson-inference program ##imagenet-console## with each test image and the model as parameters:
 
 ```
 #!/bin/bash
@@ -355,7 +355,6 @@ imagenet-console  ~/projects/TrafficSigns/test/${name} out_${name} \
 --labels=$NET/labels.txt \
 --input_blob=data \
 --output_blob=softmax
-#imagenet-camera --prototxt=$NET/deploy.prototxt --model=$NET/snapshot_iter_170.caffemodel --labels=$NET/labels.txt --input_blob=data --output_blob=softmax
 ```
 
 **Jetson TX2 Test** output images (Note the small text at the top left of each image showing the test result):
@@ -370,10 +369,10 @@ imagenet-console  ~/projects/TrafficSigns/test/${name} out_${name} \
     </tr>
     <tr>
         <td>
-            <a href="images/out256/speedLimit25_test_001.png" target=_blank><img height="240" src="images/out256/speedLimit25_test_001.png"/></a>
+            <a href="images/out256/out_speedLimit25_test_001.png" target=_blank><img height="240" src="images/out256/out_speedLimit25_test_001.png"/></a>
         </td>
         <td>
-            <a href="images/out256/speedLimit35_test_001.png" target=_blank><img height="240" src="images/out256/speedLimit35_test_001.png"/></a>
+            <a href="images/out256/out_speedLimit35_test_001.png" target=_blank><img height="240" src="images/out256/out_speedLimit35_test_001.png"/></a>
         </td>
     </tr>
     <tr>
@@ -381,10 +380,10 @@ imagenet-console  ~/projects/TrafficSigns/test/${name} out_${name} \
     </tr>
     <tr>
         <td>
-            <a href="images/out256/yield_test_001.png" target=_blank><img height="240" src="images/out256/yield_test_001.png"/></a>
+            <a href="images/out256/out_yield_test_001.png" target=_blank><img height="240" src="images/out256/out_yield_test_001.png"/></a>
         </td>
         <td>
-            <a href="images/out256/stop_test_001.png" target=_blank><img height="240" src="images/out256/stop_test_001.png"/></a>
+            <a href="images/out256/out_stop_test_001.png" target=_blank><img height="240" src="images/out256/out_stop_test_001.png"/></a>
         </td>
     </tr>
         <th colspan=2>Other</th>
@@ -394,10 +393,10 @@ imagenet-console  ~/projects/TrafficSigns/test/${name} out_${name} \
     </tr>
     <tr>
         <td>
-            <a href="images/out256/pedestrianCrossing_test_001.png" target=_blank><img height="240" src="images/out256/pedestrianCrossing_test_001.png"/></a>
+            <a href="images/out256/out_pedestrianCrossing_test_001.png" target=_blank><img height="240" src="images/out256/out_pedestrianCrossing_test_001.png"/></a>
         </td>
         <td>
-            <a href="images/out256/yieldAhead_test_001.png" target=_blank><img height="240" src="images/out256/yieldAhead_test_001.png"/></a>
+            <a href="images/out256/out_yieldAhead_test_001.png" target=_blank><img height="240" src="images/out256/out_yieldAhead_test_001.png"/></a>
         </td>
     </tr>
 </table>
