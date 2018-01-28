@@ -341,24 +341,39 @@ The model can be found <a href="TrafficSignsClassification/LeNet/model/20180122-
 
 ### Test Image Results
 
-The model was loaded on to a Jetson TX2 and the test images analyzed.
+The model was loaded on to a Jetson TX2 and the test images analyzed. The model was run by the deply.sh script, whcih called the jetson-inference program with each test image and the model:
 
-**Jetson TX2 Testing** output images:
+```
+#!/bin/bash
+#
+# script to test Traffic Signs model
+#
+name=$(basename $1)
+imagenet-console  ~/projects/TrafficSigns/test/${name} out_${name} \
+--prototxt=$NET/deploy.prototxt \
+--model=$NET/snapshot_iter_170.caffemodel \
+--labels=$NET/labels.txt \
+--input_blob=data \
+--output_blob=softmax
+#imagenet-camera --prototxt=$NET/deploy.prototxt --model=$NET/snapshot_iter_170.caffemodel --labels=$NET/labels.txt --input_blob=data --output_blob=softmax
+```
+
+**Jetson TX2 Test** output images (Note the small text at the top left of each image showing the test result):
 
 <center>
 <table width="100%">
     <tr>
-        <th colspan=2>Test Traffic Sign Images</th>
+        <th colspan=2>Test Traffic Sign Model Output Images</th>
     </tr>
     <tr>
         <th>Speed Limit 25</th><th>Speed Limit 35</th>
     </tr>
     <tr>
         <td>
-            <a href="images/out256/speedLimit25_test_001.png" target=_blank><img height="240" src="images/test/speedLimit25_test_001.png"/></a>
+            <a href="images/out256/speedLimit25_test_001.png" target=_blank><img height="240" src="images/out256/speedLimit25_test_001.png"/></a>
         </td>
         <td>
-            <a href="images/out256/speedLimit35_test_001.png" target=_blank><img height="240" src="images/test/speedLimit35_test_001.png"/></a>
+            <a href="images/out256/speedLimit35_test_001.png" target=_blank><img height="240" src="images/out256/speedLimit35_test_001.png"/></a>
         </td>
     </tr>
     <tr>
@@ -366,10 +381,10 @@ The model was loaded on to a Jetson TX2 and the test images analyzed.
     </tr>
     <tr>
         <td>
-            <a href="images/out256/yield_test_001.png" target=_blank><img height="240" src="images/test/yield_test_001.png"/></a>
+            <a href="images/out256/yield_test_001.png" target=_blank><img height="240" src="images/out256/yield_test_001.png"/></a>
         </td>
         <td>
-            <a href="images/out256/stop_test_001.png" target=_blank><img height="240" src="images/test/stop_test_001.png"/></a>
+            <a href="images/out256/stop_test_001.png" target=_blank><img height="240" src="images/out256/stop_test_001.png"/></a>
         </td>
     </tr>
         <th colspan=2>Other</th>
@@ -379,10 +394,10 @@ The model was loaded on to a Jetson TX2 and the test images analyzed.
     </tr>
     <tr>
         <td>
-            <a href="images/out256/pedestrianCrossing_test_001.png" target=_blank><img height="240" src="images/test/pedestrianCrossing_test_001.png"/></a>
+            <a href="images/out256/pedestrianCrossing_test_001.png" target=_blank><img height="240" src="images/out256/pedestrianCrossing_test_001.png"/></a>
         </td>
         <td>
-            <a href="images/out256/yieldAhead_test_001.png" target=_blank><img height="240" src="images/test/yieldAhead_test_001.png"/></a>
+            <a href="images/out256/yieldAhead_test_001.png" target=_blank><img height="240" src="images/out256/yieldAhead_test_001.png"/></a>
         </td>
     </tr>
 </table>
@@ -391,13 +406,15 @@ The model was loaded on to a Jetson TX2 and the test images analyzed.
 The results were poor with only a 25% success rate:
 
 ```cat ~/Desktop/TX2_log.txt | grep 'class #'
+OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit35_test_002.png' -> 74.46257% class #1 (speedLimit35)
+OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_001.png' -> 99.99680% class #2 (stop)
+OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_003.png' -> 99.99535% class #2 (stop)
+OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yield_test_001.png' -> 54.82035% class #3 (yield)
 NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/keepRight_test_001.png' -> 99.15723% class #2 (stop)
 NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/roundabout_test_001.png' -> 99.75668% class #2 (stop)
-***OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit35_test_002.png' -> 74.46257% class #1 (speedLimit35)***
 NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/various_test_001.png' -> 98.85838% class #3 (yield)
 NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_001.png' -> 68.85816% class #3 (yield)
 NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit25_test_001.png' -> 78.77179% class #3 (yield)
-OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_001.png' -> 99.99680% class #2 (stop)
 NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yieldAhead_test_001.png' -> 92.12694% class #3 (yield)
 NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_002.png' -> 44.04021% class #2 (stop)
 NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit25_test_002.png' -> 99.95559% class #2 (stop)
@@ -405,8 +422,6 @@ NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_002.png
 NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yieldAhead_test_002.png' -> 94.01840% class #3 (yield)
 NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrian_test_001.png' -> 99.90257% class #3 (yield)
 NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit35_test_001.png' -> 90.12273% class #0 (speedLimit25)
-OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_003.png' -> 99.99535% class #2 (stop)
-OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yield_test_001.png' -> 54.82035% class #3 (yield)
 4 / 16 OK
 ```
 
