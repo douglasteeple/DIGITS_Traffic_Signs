@@ -341,7 +341,7 @@ The model can be found <a href="TrafficSignsClassification/LeNet/model/20180122-
 
 ### Test Image Results
 
-The model was loaded on to a Jetson TX2 and the test images analyzed. The model was run by the deploy.sh script, whcih called the jetson-inference program ##imagenet-console## with each test image and the model as parameters:
+The model did not perform as well on the test images dataset. The model was loaded on to a Jetson TX2 and the test images analyzed. The model was run by the `deploy.sh` script, whcih called the jetson-inference program ##imagenet-console## with each test image and the model as parameters:
 
 ```
 #!/bin/bash
@@ -365,7 +365,7 @@ imagenet-console  ~/projects/TrafficSigns/test/${name} out_${name} \
         <th colspan=2>Test Traffic Sign Model Output Images</th>
     </tr>
     <tr>
-        <th>Speed Limit 25</th><th>Speed Limit 35</th>
+        <th>Speed Limit 25 NG</th><th>Speed Limit 35 OK</th>
     </tr>
     <tr>
         <td>
@@ -376,7 +376,7 @@ imagenet-console  ~/projects/TrafficSigns/test/${name} out_${name} \
         </td>
     </tr>
     <tr>
-        <th>Yield</th><th>Stop</th>
+        <th>Yield OK</th><th>Stop OK</th>
     </tr>
     <tr>
         <td>
@@ -389,7 +389,7 @@ imagenet-console  ~/projects/TrafficSigns/test/${name} out_${name} \
         <th colspan=2>Other</th>
     </tr>
     <tr>
-        <th>Pedestrian Crossing</th><th>Yield Ahead</th>
+        <th>Pedestrian Crossing NG</th><th>Yield Ahead NG</th>
     </tr>
     <tr>
         <td>
@@ -402,26 +402,33 @@ imagenet-console  ~/projects/TrafficSigns/test/${name} out_${name} \
 </table>
 </center>
 
-The results were poor with only a 25% success rate:
+The results were poor with only a 50% success rate on trained images
 
 ```cat ~/Desktop/TX2_log.txt | grep 'class #'
+Trained Images OK
 OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit35_test_002.png' -> 74.46257% class #1 (speedLimit35)
 OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_001.png' -> 99.99680% class #2 (stop)
 OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_003.png' -> 99.99535% class #2 (stop)
 OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yield_test_001.png' -> 54.82035% class #3 (yield)
-NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/keepRight_test_001.png' -> 99.15723% class #2 (stop)
-NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/roundabout_test_001.png' -> 99.75668% class #2 (stop)
-NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/various_test_001.png' -> 98.85838% class #3 (yield)
-NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_001.png' -> 68.85816% class #3 (yield)
-NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit25_test_001.png' -> 78.77179% class #3 (yield)
-NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yieldAhead_test_001.png' -> 92.12694% class #3 (yield)
-NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_002.png' -> 44.04021% class #2 (stop)
+
+Trained Images Misclassified
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit35_test_001.png' -> 90.12273% class #0 (speedLimit25)
 NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit25_test_002.png' -> 99.95559% class #2 (stop)
 NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_002.png' -> 47.60285% class #0 (speedLimit25)
-NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yieldAhead_test_002.png' -> 94.01840% class #3 (yield)
-NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrian_test_001.png' -> 99.90257% class #3 (yield)
-NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit35_test_001.png' -> 90.12273% class #0 (speedLimit25)
-4 / 16 OK
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit25_test_001.png' -> 78.77179% class #3 (yield)
+
+Untrained Images
+NA imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/keepRight_test_001.png' -> 99.15723% class #2 (stop)
+NA imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/roundabout_test_001.png' -> 99.75668% class #2 (stop)
+NA imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/various_test_001.png' -> 98.85838% class #3 (yield)
+NA imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_001.png' -> 68.85816% class #3 (yield)
+NA imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yieldAhead_test_001.png' -> 92.12694% class #3 (yield)
+NA imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_002.png' -> 44.04021% class #2 (stop)
+NA imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yieldAhead_test_002.png' -> 94.01840% class #3 (yield)
+NA imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrian_test_001.png' -> 99.90257% class #3 (yield)
+
+4 / 8 OK on trained images
+
 ```
 
 ## Discussion
@@ -432,13 +439,15 @@ LeNet gave the best results, perhaps due to a good "impedance" match between the
 
 The availability of large numbers of images for training and validation is a valuable asset. The LISA dataset has over 7,000 real world images. The annotations CSV files were also a great asset, greatly simplifying the process of extracting sign faces.
 
-In the case of imaging taken from a moving vehicle, perhaps at high speed, both accuracy and inference speed are equally important. Clearly, the decision must be made quickly to be relevant and a mistake in classification could be fatal.
+Distinguishing between `speed limit 25` and `speed limit 35` turned out to be difficult. Distinguishing between `yield` and `yield ahead` turned out to be difficult. Most of the misclassification occurred on sign images that the model was not trained on.
 
-A greater variety of traffic signs needs to be in the dataset and to be classified in order to be useful in the real world. There are perhaps in the order hundreds of different traffic signs. Any real world deployment would need to recognize this large number of classes.
+A greater variety of traffic signs needs to be in the dataset and to be classified in order to be useful in the real world. There are perhaps in the order hundreds of different traffic signs. Any real world deployment would need to recognize this large number of classes. 
+
+In the case of imaging taken from a moving vehicle, perhaps at high speed, both accuracy and inference speed are equally important. Clearly, the decision must be made quickly to be relevant and a mistake in classification could be fatal.
 
 ## Conclusion / Future Work
 
-The project was a success achieving typically 99% accuracy in classification. Further work would be in creating a larger dataset with more kinds of traffic signs and extending the model to classify perhaps hundreds of different signs.
+The project was a success in achieving typically 99% accuracy in classification with the validation test set, but unsuccessful on the independent test images dataset.  Further work would be in creating a larger dataset with more kinds of traffic signs and extending the model to classify perhaps hundreds of different signs.
 
 One fascinating aspect of traffic signs is "dynamic" signs such as traffic lights. Grayscale images were used in this project because many self-driving automobiles are equpipped with only grayscale cameras. This present a challenge for distinguishing whether a traffic signal is "Red" or "Green". Persons that are color blind have a similar problem when driving, being unable to see red vs green color in the lights. However, "Red" is always the top light and green the bottom, so the light color can be distinguished from brightness of the top-most vs the bottom-most light. A model that specifically addresses traffic lights would be a fascinating follow-on project.
 
