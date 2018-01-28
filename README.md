@@ -1,5 +1,6 @@
 # Udacity Term 2 Robotic Inference Project
 
+A PDF version of this writeup can be found <a href="http://douglasteeple.com/RobticInference/RoboticInference.pdf">here</a>.
 <hr>
 
 ## Abstract
