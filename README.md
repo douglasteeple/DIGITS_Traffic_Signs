@@ -4,7 +4,7 @@
 
 ## Abstract
 
-Two image classification deep neural network projects are presented. The first is a classification model of a given dataset of images of bottles, candy wrappers and nothing on a conveyor belt. The model is trained to classify images into one of the three classes from the given dataset. The process of building the dataset, creating the model and the results of testing are given. The second is a traffic sign dataset from the LISA publically available dataset and test images taken independently. The model is to classify images containing traffic signs into stop, yield, speed limit 25 and speed limit 35 classes. THe process of extracting sign faces from the 7,000+ images dataset is documented. Three models are tested; AlexNet, GoogLeNet and LeNet. Results show that LeNet provides the best traffic sign classification, likely due to a good "impedance" match between the preferred image size of LeNet and the trafic sign face images.
+Two image classification deep neural network projects are presented. The first is a classification model of a given dataset of images of bottles, candy wrappers and nothing on a conveyor belt. The model is trained to classify images into one of the three classes from the given dataset. The process of building the dataset, creating the model and the results of testing are given. The second is a traffic sign dataset from the LISA publicly available dataset and test images taken independently. The model is to classify images containing traffic signs into stop, yield, speed limit 25 and speed limit 35 classes. The process of extracting sign faces from the 7,000+ images dataset is documented. Three models are tested; AlexNet, GoogLeNet and LeNet. Results show that LeNet provides the best traffic sign classification, likely due to a good "impedance" match between the preferred image size of LeNet and the traffic sign face images.
 
 ## Introduction
 
@@ -30,7 +30,7 @@ A sample of the P1 dataset source files:
     <img width="100%" src="P1/GoogLeNet/P1_Color_SourceImages.png" />
 </td></tr></table>
 
-The dataset was created as 256x256 color images, with the defailt training/validation % split:
+The dataset was created as 256x256 color images, with the default training/validation % split:
 
 <table><tr><td>
     <img width="100%" src="P1/GoogLeNet/P1_Color_Dataset-1.png" />
@@ -49,7 +49,7 @@ The only parameter changed from the DIGITS defaults was the number of epochs whi
 
 ## Data Acquisition
 
-The P1 dataset was provided by Udacity and no processing was required. THe training and validation datasets were created as 256x256 color images. Both grayscale and color images were tested, with the same model.
+The P1 dataset was provided by Udacity and no processing was required. The training and validation datasets were created as 256x256 color images. Both grayscale and color images were tested, with the same model.
 
 
 ## Results
@@ -60,7 +60,7 @@ The **evaluate** results for color images are:
     <img width="100%" src="P1/GoogLeNet/P1ColorEvaluate.png"/>
 </td></tr></table>
 
-The model clearly passes the project requirements of > 75% acccuracy and procesing time of less than 10ms.
+The model clearly passes the project requirements of > 75% accuracy and processing time of less than 10ms.
 
 The training accuracy graph as given by the model is:
 
@@ -103,7 +103,7 @@ The sign images were converted to 256x256 pixels for AlexNet and GoogLeNet, and 
 
 ## Data Acquisition
 
-The <a href="http://cvrr.ucsd.edu/LISA/lisa-traffic-sign-dataset.html">LISA</a> dataset contains over 7,000 traffic sign images. This dataset was chosen for the reality of the images (many signs are small, occluded, blurry, etc) and its sheer volume fo images. The images were taken from frames of movies taken from a vehicle on actual streets, sometimes stationary and sometime mvoing. While the rubric for the project specifies at least 3 classes of images, 4 classes were chosen. The classes are **stop**, **yield**, **speedLimit25** and **speedLimit35**. The first two classes were chosen due to their imoprtance for vehicle safety. The second two were chosen to set a challenge level of difficuly in distinguishing 25 from 35.
+The <a href="http://cvrr.ucsd.edu/LISA/lisa-traffic-sign-dataset.html">LISA</a> dataset contains over 7,000 traffic sign images. This dataset was chosen for the reality of the images (many signs are small, occluded, blurry, etc) and its sheer volume fo images. The images were taken from frames of movies taken from a vehicle on actual streets, sometimes stationary and sometime mvoing. While the rubric for the project specifies at least 3 classes of images, 4 classes were chosen. The classes are **stop**, **yield**, **speedLimit25** and **speedLimit35**. The first two classes were chosen due to their importance for vehicle safety. The second two were chosen to set a challenge level of difficulty in distinguishing 25 from 35.
 
 These are examples of raw images of the 4 classes of signs chosen:
 
@@ -179,7 +179,7 @@ The processed images are cropped from the raw data to contain just the sign face
 </table>
 </center>
 
-The raw and processed images are mixture of grayscale and color images. The DIGITS DataSet creation process converts all the images to grayscale. The processed images are stretched to a comomn size of 32x32 pixels in DIGITS.
+The raw and processed images are mixture of grayscale and color images. The DIGITS DataSet creation process converts all the images to grayscale. The processed images are stretched to a common size of 32x32 pixels in DIGITS.
 
 The count of **training** images for each class are:
 
@@ -233,7 +233,7 @@ The count of **validation** images for each class are:
 
 The split in number of training / validation images was set at 80% / 20% in the doit.sh bash script.
 
-While the raw images in the LISA dataset were used to create the training and validation set, a completely independent test dataset was taken using an iPhone. THe images are taken at various angles, sizes (on the image) and varying light conditions. It is important to note that the test images were taken completely separately from the training and validation images.
+While the raw images in the LISA dataset were used to create the training and validation set, a completely independent test dataset was taken using an iPhone. The images are taken at various angles, sizes (on the image) and varying light conditions. It is important to note that the test images were taken completely separately from the training and validation images.
 
 **Testing** images:
 
@@ -288,7 +288,7 @@ The TrafficSigns dataset was created as follows:
     <img width="100%" src="TrafficSignsClassification/AlexNet/TrafficSignsDataSet.png"/>
 </td></tr></table>
 
-The only difference between LeNet vs GoogLeNet / AlexNet datasets was that the LeNet images size was stretched to 32x32 and GoogLeNet / AlexNet was strecthed to 256x256 pixels. In all models the number of epochs parameter was set to 5.
+The only difference between LeNet vs GoogLeNet / AlexNet datasets was that the LeNet images size was stretched to 32x32 and GoogLeNet / AlexNet was stretched to 256x256 pixels. In all models the number of epochs parameter was set to 5.
 
 The results for AlexNet and GoogLeNet as shown below were poor. AlexNet achieved only 80% accuracy:
 
@@ -341,7 +341,7 @@ The model can be found <a href="TrafficSignsClassification/LeNet/model/20180122-
 
 ### Test Image Results
 
-The model did not perform as well on the test images dataset. The model was loaded on to a Jetson TX2 and the test images analyzed. The model was run by the `deploy.sh` script, whcih called the jetson-inference program ##imagenet-console## with each test image and the model as parameters:
+The model did not perform as well on the test images dataset. The model was loaded on to a Jetson TX2 and the test images analyzed. The model was run by the `deploy.sh` script, whcih called the jetson-inference program *imagenet-console* with each test image and the model as parameters:
 
 ```
 #!/bin/bash
@@ -449,7 +449,7 @@ In the case of imaging taken from a moving vehicle, perhaps at high speed, both 
 
 The project was a success in achieving typically 99% accuracy in classification with the validation test set, but unsuccessful on the independent test images dataset.  Further work would be in creating a larger dataset with more kinds of traffic signs and extending the model to classify perhaps hundreds of different signs.
 
-One fascinating aspect of traffic signs is "dynamic" signs such as traffic lights. Grayscale images were used in this project because many self-driving automobiles are equpipped with only grayscale cameras. This present a challenge for distinguishing whether a traffic signal is "Red" or "Green". Persons that are color blind have a similar problem when driving, being unable to see red vs green color in the lights. However, "Red" is always the top light and green the bottom, so the light color can be distinguished from brightness of the top-most vs the bottom-most light. A model that specifically addresses traffic lights would be a fascinating follow-on project.
+One fascinating aspect of traffic signs is "dynamic" signs such as traffic lights. Grayscale images were used in this project because many self-driving automobiles are equipped with only grayscale cameras. This present a challenge for distinguishing whether a traffic signal is "Red" or "Green". Persons that are color blind have a similar problem when driving, being unable to see red vs green color in the lights. However, "Red" is always the top light and green the bottom, so the light color can be distinguished from brightness of the top-most vs the bottom-most light. A model that specifically addresses traffic lights would be a fascinating follow-on project.
 
 ## References
 
