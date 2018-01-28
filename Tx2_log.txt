@@ -1,0 +1,839 @@
+#
+# summary stats
+#
+cat ~/Desktop/TX2_log.txt | grep 'class #'
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/keepRight_test_001.png' -> 99.15723% class #2 (stop)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/roundabout_test_001.png' -> 99.75668% class #2 (stop)
+OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit35_test_002.png' -> 74.46257% class #1 (speedLimit35)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/various_test_001.png' -> 98.85838% class #3 (yield)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_001.png' -> 68.85816% class #3 (yield)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit25_test_001.png' -> 78.77179% class #3 (yield)
+OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_001.png' -> 99.99680% class #2 (stop)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yieldAhead_test_001.png' -> 92.12694% class #3 (yield)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_002.png' -> 44.04021% class #2 (stop)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit25_test_002.png' -> 99.95559% class #2 (stop)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_002.png' -> 47.60285% class #0 (speedLimit25)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yieldAhead_test_002.png' -> 94.01840% class #3 (yield)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrian_test_001.png' -> 99.90257% class #3 (yield)
+NG imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit35_test_001.png' -> 90.12273% class #0 (speedLimit25)
+OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_003.png' -> 99.99535% class #2 (stop)
+OK imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yield_test_001.png' -> 54.82035% class #3 (yield)
+4 / 16 OK
+#
+# raw output log
+#
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/keepRight_test_001.png]  2 [out_keepRight_test_001.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/keepRight_test_001.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036672 ms
+[GIE]  layer conv1 input reformatter 0 - 0.060896 ms
+[GIE]  layer conv1 - 0.153568 ms
+[GIE]  layer pool1 - 0.043776 ms
+[GIE]  layer conv2 - 0.332224 ms
+[GIE]  layer pool2 - 0.035840 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029600 ms
+[GIE]  layer ip1 + relu1 - 1.415072 ms
+[GIE]  layer ip2 - 0.086848 ms
+[GIE]  layer softmax - 0.060064 ms
+[GIE]  layer network time - 2.254560 ms
+class 0002 - 0.991572  (stop)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/keepRight_test_001.png' -> 99.15723% class #2 (stop)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_keepRight_test_001.png'
+imagenet-console:  completed saving 'out_keepRight_test_001.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/roundabout_test_001.png]  2 [out_roundabout_test_001.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/roundabout_test_001.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036640 ms
+[GIE]  layer conv1 input reformatter 0 - 0.059840 ms
+[GIE]  layer conv1 - 0.155200 ms
+[GIE]  layer pool1 - 0.042464 ms
+[GIE]  layer conv2 - 0.332832 ms
+[GIE]  layer pool2 - 0.035456 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029536 ms
+[GIE]  layer ip1 + relu1 - 1.375840 ms
+[GIE]  layer ip2 - 0.088480 ms
+[GIE]  layer softmax - 0.058944 ms
+[GIE]  layer network time - 2.215232 ms
+class 0002 - 0.997567  (stop)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/roundabout_test_001.png' -> 99.75668% class #2 (stop)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_roundabout_test_001.png'
+imagenet-console:  completed saving 'out_roundabout_test_001.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/speedLimit35_test_002.png]  2 [out_speedLimit35_test_002.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/speedLimit35_test_002.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036416 ms
+[GIE]  layer conv1 input reformatter 0 - 0.059744 ms
+[GIE]  layer conv1 - 0.155712 ms
+[GIE]  layer pool1 - 0.043776 ms
+[GIE]  layer conv2 - 0.332928 ms
+[GIE]  layer pool2 - 0.035520 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029376 ms
+[GIE]  layer ip1 + relu1 - 1.455200 ms
+[GIE]  layer ip2 - 0.088480 ms
+[GIE]  layer softmax - 0.060128 ms
+[GIE]  layer network time - 2.297280 ms
+class 0000 - 0.254285  (speedLimit25)
+class 0001 - 0.744626  (speedLimit35)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit35_test_002.png' -> 74.46257% class #1 (speedLimit35)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_speedLimit35_test_002.png'
+imagenet-console:  completed saving 'out_speedLimit35_test_002.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/various_test_001.png]  2 [out_various_test_001.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/various_test_001.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.035872 ms
+[GIE]  layer conv1 input reformatter 0 - 0.059808 ms
+[GIE]  layer conv1 - 0.153760 ms
+[GIE]  layer pool1 - 0.043776 ms
+[GIE]  layer conv2 - 0.333216 ms
+[GIE]  layer pool2 - 0.035680 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029568 ms
+[GIE]  layer ip1 + relu1 - 1.457504 ms
+[GIE]  layer ip2 - 0.087072 ms
+[GIE]  layer softmax - 0.060192 ms
+[GIE]  layer network time - 2.296448 ms
+class 0003 - 0.988584  (yield)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/various_test_001.png' -> 98.85838% class #3 (yield)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_various_test_001.png'
+imagenet-console:  completed saving 'out_various_test_001.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_001.png]  2 [out_pedestrianCrossing_test_001.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_001.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036512 ms
+[GIE]  layer conv1 input reformatter 0 - 0.059648 ms
+[GIE]  layer conv1 - 0.153728 ms
+[GIE]  layer pool1 - 0.043680 ms
+[GIE]  layer conv2 - 0.334496 ms
+[GIE]  layer pool2 - 0.035648 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029792 ms
+[GIE]  layer ip1 + relu1 - 1.446944 ms
+[GIE]  layer ip2 - 0.087296 ms
+[GIE]  layer softmax - 0.058496 ms
+[GIE]  layer network time - 2.286240 ms
+class 0000 - 0.295240  (speedLimit25)
+class 0002 - 0.010261  (stop)
+class 0003 - 0.688582  (yield)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_001.png' -> 68.85816% class #3 (yield)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_pedestrianCrossing_test_001.png'
+imagenet-console:  completed saving 'out_pedestrianCrossing_test_001.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/speedLimit25_test_001.png]  2 [out_speedLimit25_test_001.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/speedLimit25_test_001.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036640 ms
+[GIE]  layer conv1 input reformatter 0 - 0.059776 ms
+[GIE]  layer conv1 - 0.155936 ms
+[GIE]  layer pool1 - 0.043680 ms
+[GIE]  layer conv2 - 0.334496 ms
+[GIE]  layer pool2 - 0.036000 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029376 ms
+[GIE]  layer ip1 + relu1 - 1.424704 ms
+[GIE]  layer ip2 - 0.088672 ms
+[GIE]  layer softmax - 0.058848 ms
+[GIE]  layer network time - 2.268128 ms
+class 0000 - 0.043741  (speedLimit25)
+class 0001 - 0.168434  (speedLimit35)
+class 0003 - 0.787718  (yield)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit25_test_001.png' -> 78.77179% class #3 (yield)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_speedLimit25_test_001.png'
+imagenet-console:  completed saving 'out_speedLimit25_test_001.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/stop_test_001.png]  2 [out_stop_test_001.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/stop_test_001.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036224 ms
+[GIE]  layer conv1 input reformatter 0 - 0.059840 ms
+[GIE]  layer conv1 - 0.153760 ms
+[GIE]  layer pool1 - 0.043744 ms
+[GIE]  layer conv2 - 0.333088 ms
+[GIE]  layer pool2 - 0.036736 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029760 ms
+[GIE]  layer ip1 + relu1 - 1.432960 ms
+[GIE]  layer ip2 - 0.090112 ms
+[GIE]  layer softmax - 0.060032 ms
+[GIE]  layer network time - 2.276256 ms
+class 0002 - 0.999968  (stop)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_001.png' -> 99.99680% class #2 (stop)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_stop_test_001.png'
+imagenet-console:  completed saving 'out_stop_test_001.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/yieldAhead_test_001.png]  2 [out_yieldAhead_test_001.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/yieldAhead_test_001.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036544 ms
+[GIE]  layer conv1 input reformatter 0 - 0.059680 ms
+[GIE]  layer conv1 - 0.155232 ms
+[GIE]  layer pool1 - 0.042304 ms
+[GIE]  layer conv2 - 0.333152 ms
+[GIE]  layer pool2 - 0.035648 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029376 ms
+[GIE]  layer ip1 + relu1 - 1.450304 ms
+[GIE]  layer ip2 - 0.090048 ms
+[GIE]  layer softmax - 0.059168 ms
+[GIE]  layer network time - 2.291456 ms
+class 0001 - 0.075778  (speedLimit35)
+class 0003 - 0.921269  (yield)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yieldAhead_test_001.png' -> 92.12694% class #3 (yield)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_yieldAhead_test_001.png'
+imagenet-console:  completed saving 'out_yieldAhead_test_001.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_002.png]  2 [out_pedestrianCrossing_test_002.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_002.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036384 ms
+[GIE]  layer conv1 input reformatter 0 - 0.059712 ms
+[GIE]  layer conv1 - 0.155840 ms
+[GIE]  layer pool1 - 0.043776 ms
+[GIE]  layer conv2 - 0.334496 ms
+[GIE]  layer pool2 - 0.035840 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029440 ms
+[GIE]  layer ip1 + relu1 - 1.427840 ms
+[GIE]  layer ip2 - 0.088672 ms
+[GIE]  layer softmax - 0.060320 ms
+[GIE]  layer network time - 2.272320 ms
+class 0000 - 0.264580  (speedLimit25)
+class 0001 - 0.287558  (speedLimit35)
+class 0002 - 0.440402  (stop)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrianCrossing_test_002.png' -> 44.04021% class #2 (stop)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_pedestrianCrossing_test_002.png'
+imagenet-console:  completed saving 'out_pedestrianCrossing_test_002.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/speedLimit25_test_002.png]  2 [out_speedLimit25_test_002.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/speedLimit25_test_002.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036032 ms
+[GIE]  layer conv1 input reformatter 0 - 0.060384 ms
+[GIE]  layer conv1 - 0.153024 ms
+[GIE]  layer pool1 - 0.043872 ms
+[GIE]  layer conv2 - 0.332768 ms
+[GIE]  layer pool2 - 0.035680 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029376 ms
+[GIE]  layer ip1 + relu1 - 1.422176 ms
+[GIE]  layer ip2 - 0.086848 ms
+[GIE]  layer softmax - 0.058752 ms
+[GIE]  layer network time - 2.258912 ms
+class 0002 - 0.999556  (stop)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit25_test_002.png' -> 99.95559% class #2 (stop)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_speedLimit25_test_002.png'
+imagenet-console:  completed saving 'out_speedLimit25_test_002.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/stop_test_002.png]  2 [out_stop_test_002.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/stop_test_002.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036832 ms
+[GIE]  layer conv1 input reformatter 0 - 0.059808 ms
+[GIE]  layer conv1 - 0.154464 ms
+[GIE]  layer pool1 - 0.043776 ms
+[GIE]  layer conv2 - 0.332928 ms
+[GIE]  layer pool2 - 0.035328 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029568 ms
+[GIE]  layer ip1 + relu1 - 1.391680 ms
+[GIE]  layer ip2 - 0.086944 ms
+[GIE]  layer softmax - 0.058880 ms
+[GIE]  layer network time - 2.230208 ms
+class 0000 - 0.476028  (speedLimit25)
+class 0001 - 0.463582  (speedLimit35)
+class 0002 - 0.027262  (stop)
+class 0003 - 0.033128  (yield)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_002.png' -> 47.60285% class #0 (speedLimit25)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_stop_test_002.png'
+imagenet-console:  completed saving 'out_stop_test_002.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/yieldAhead_test_002.png]  2 [out_yieldAhead_test_002.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/yieldAhead_test_002.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036288 ms
+[GIE]  layer conv1 input reformatter 0 - 0.059776 ms
+[GIE]  layer conv1 - 0.155488 ms
+[GIE]  layer pool1 - 0.042656 ms
+[GIE]  layer conv2 - 0.336192 ms
+[GIE]  layer pool2 - 0.035552 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029472 ms
+[GIE]  layer ip1 + relu1 - 1.451424 ms
+[GIE]  layer ip2 - 0.088192 ms
+[GIE]  layer softmax - 0.058944 ms
+[GIE]  layer network time - 2.293984 ms
+class 0001 - 0.017199  (speedLimit35)
+class 0002 - 0.033904  (stop)
+class 0003 - 0.940184  (yield)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yieldAhead_test_002.png' -> 94.01840% class #3 (yield)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_yieldAhead_test_002.png'
+imagenet-console:  completed saving 'out_yieldAhead_test_002.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/pedestrian_test_001.png]  2 [out_pedestrian_test_001.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/pedestrian_test_001.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036480 ms
+[GIE]  layer conv1 input reformatter 0 - 0.059840 ms
+[GIE]  layer conv1 - 0.152672 ms
+[GIE]  layer pool1 - 0.042528 ms
+[GIE]  layer conv2 - 0.334496 ms
+[GIE]  layer pool2 - 0.035648 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029568 ms
+[GIE]  layer ip1 + relu1 - 1.480928 ms
+[GIE]  layer ip2 - 0.087968 ms
+[GIE]  layer softmax - 0.060256 ms
+[GIE]  layer network time - 2.320384 ms
+class 0003 - 0.999026  (yield)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/pedestrian_test_001.png' -> 99.90257% class #3 (yield)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_pedestrian_test_001.png'
+imagenet-console:  completed saving 'out_pedestrian_test_001.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/speedLimit35_test_001.png]  2 [out_speedLimit35_test_001.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/speedLimit35_test_001.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036576 ms
+[GIE]  layer conv1 input reformatter 0 - 0.060576 ms
+[GIE]  layer conv1 - 0.153760 ms
+[GIE]  layer pool1 - 0.043584 ms
+[GIE]  layer conv2 - 0.332992 ms
+[GIE]  layer pool2 - 0.035648 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029632 ms
+[GIE]  layer ip1 + relu1 - 1.401792 ms
+[GIE]  layer ip2 - 0.087904 ms
+[GIE]  layer softmax - 0.058848 ms
+[GIE]  layer network time - 2.241312 ms
+class 0000 - 0.901227  (speedLimit25)
+class 0001 - 0.091221  (speedLimit35)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/speedLimit35_test_001.png' -> 90.12273% class #0 (speedLimit25)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_speedLimit35_test_001.png'
+imagenet-console:  completed saving 'out_speedLimit35_test_001.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/stop_test_003.png]  2 [out_stop_test_003.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/stop_test_003.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036416 ms
+[GIE]  layer conv1 input reformatter 0 - 0.059648 ms
+[GIE]  layer conv1 - 0.154112 ms
+[GIE]  layer pool1 - 0.042656 ms
+[GIE]  layer conv2 - 0.334720 ms
+[GIE]  layer pool2 - 0.035456 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029600 ms
+[GIE]  layer ip1 + relu1 - 1.420608 ms
+[GIE]  layer ip2 - 0.088544 ms
+[GIE]  layer softmax - 0.060096 ms
+[GIE]  layer network time - 2.261856 ms
+class 0002 - 0.999954  (stop)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/stop_test_003.png' -> 99.99535% class #2 (stop)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_stop_test_003.png'
+imagenet-console:  completed saving 'out_stop_test_003.png'
+
+shutting down...
+imagenet-console
+  args (8):  0 [imagenet-console]  1 [/home/nvidia/projects/TrafficSigns/test/yield_test_001.png]  2 [out_yield_test_001.png]  3 [--prototxt=/home/nvidia/projects/TrafficSigns//deploy.prototxt]  4 [--model=/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel]  5 [--labels=/home/nvidia/projects/TrafficSigns//labels.txt]  6 [--input_blob=data]  7 [--output_blob=softmax]  
+
+
+imageNet -- loading classification network model from:
+         -- prototxt     /home/nvidia/projects/TrafficSigns//deploy.prototxt
+         -- model        /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel
+         -- class_labels /home/nvidia/projects/TrafficSigns//labels.txt
+         -- input_blob   'data'
+         -- output_blob  'softmax'
+         -- batch_size   2
+
+[GIE]  TensorRT version 3.0, build 3000
+[GIE]  attempting to open cache file /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  loading network profile from cache... /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel.2.tensorcache
+[GIE]  platform has FP16 support.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+[GIE]  CUDA engine context initialized with 2 bindings
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  binding index:  0
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel input  dims (b=2 c=1 h=32 w=32) size=8192
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101540000 GPU 0x101540000
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  binding index:  1
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel output 0 softmax  dims (b=2 c=4 h=1 w=1) size=32
+[cuda]  cudaAllocMapped 32 bytes, CPU 0x101340200 GPU 0x101340200
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+[GIE]  /home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel loaded
+imageNet -- loaded 4 class info entries
+/home/nvidia/projects/TrafficSigns//snapshot_iter_170.caffemodel initialized.
+loaded image  /home/nvidia/projects/TrafficSigns/test/yield_test_001.png  (3264 x 2448)  127844352 bytes
+[cuda]  cudaAllocMapped 127844352 bytes, CPU 0x101740000 GPU 0x101740000
+[GIE]  layer scale - 0.036032 ms
+[GIE]  layer conv1 input reformatter 0 - 0.059776 ms
+[GIE]  layer conv1 - 0.152864 ms
+[GIE]  layer pool1 - 0.042240 ms
+[GIE]  layer conv2 - 0.334560 ms
+[GIE]  layer pool2 - 0.035616 ms
+[GIE]  layer ip1 + relu1 input reformatter 0 - 0.029824 ms
+[GIE]  layer ip1 + relu1 - 1.407232 ms
+[GIE]  layer ip2 - 0.088256 ms
+[GIE]  layer softmax - 0.060256 ms
+[GIE]  layer network time - 2.246656 ms
+class 0001 - 0.450298  (speedLimit35)
+class 0003 - 0.548203  (yield)
+imagenet-console:  '/home/nvidia/projects/TrafficSigns/test/yield_test_001.png' -> 54.82035% class #3 (yield)
+loaded image  fontmapA.png  (256 x 512)  2097152 bytes
+[cuda]  cudaAllocMapped 2097152 bytes, CPU 0x109130000 GPU 0x109130000
+[cuda]  cudaAllocMapped 8192 bytes, CPU 0x101542000 GPU 0x101542000
+imagenet-console:  attempting to save output image to 'out_yield_test_001.png'
+imagenet-console:  completed saving 'out_yield_test_001.png'
+
+shutting down...
